@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="owm">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/src/code/owm" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/code/owm" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/src/code/owm" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/src/code/owm" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/code/owm" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/src/code/owm" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/src/code/owm" recursive="false" type="SOURCES" />
+  </library>
+</component>
