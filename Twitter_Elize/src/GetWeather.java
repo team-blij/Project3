@@ -17,7 +17,7 @@ public class GetWeather {
 
                 OpenWeatherMap openWeatherMap = new OpenWeatherMap("");
                 //Getting weather at Rotterdam
-                CurrentWeather currentWeather = openWeatherMap.currentWeatherByCityName("London");
+                CurrentWeather currentWeather = openWeatherMap.currentWeatherByCityName("Rotterdam, NL");
                 float minTemperature = currentWeather.getMainInstance().getMinTemperature();
                 float maxTemperature = currentWeather.getMainInstance().getMaxTemperature();
                 int averageTemperature = Math.round(((minTemperature + maxTemperature) / 2));

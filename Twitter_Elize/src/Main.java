@@ -10,8 +10,11 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
+        //Twitter call
         GetTwitter getTwitter = new GetTwitter();
-        getTwitter.setup();
+        getTwitter.getQuery();
+
+        //Weather call
 //        try {
 //            GetWeather getWeather = new GetWeather();
 //            getWeather.getWeatherAt();
