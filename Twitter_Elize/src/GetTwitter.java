@@ -10,15 +10,14 @@ import java.util.ArrayList;
 public class GetTwitter {
     ConfigurationBuilder cb = new ConfigurationBuilder();
     public Twitter twitterInstance;
-    public Query query = new Query("rotterdamzoo " + "Blijdorp");
+    //public Query query = new Query("rotterdamzoo " + "Blijdorp");
+    public Query query = null;
     public User Blijdorp = null;
     private ArrayList<String> blijdorpAssets= new ArrayList<String>();
 
 
     public void setup(){
 
-            blijdorpAssets.add("@rotterdamzoo :) oceanium");
-            blijdorpAssets.add("@rotterdamzoo :) riverahal");
 
             cb.setOAuthConsumerKey("hYiZEb7KIq8xRzouCcHMHV8KG");
             cb.setOAuthConsumerSecret("KwBo9KEfb28iqx4MCzJLyfKiIUoKSY68Nw9un5xGKWSjb6MK8m");
@@ -36,7 +35,6 @@ public class GetTwitter {
 
     private void fetchAndDrawTweets(){
         try{
-
             QueryResult result = twitterInstance.search(query);
             ArrayList tweets = (ArrayList) result.getTweets();
             for (int i = 0; i < result.getCount(); i++){
@@ -47,7 +45,7 @@ public class GetTwitter {
                 String message = status.getText();
                 //The tweet
                 String geoLocation = status.getUser().getLocation();
-
+                //the location of the user
 
                 System.out.println(status + " " + user + " " + message);
 
@@ -67,13 +65,17 @@ public class GetTwitter {
         return Blijdorp;
     }// end of GetUser()
 
+
+//  Sentiment analyse:
+//  --------------------------------------------------------------------------------------------------------------------
+//  Welk onderdeel van diergaarde Blijdorp vinden de bezoekers het leukst?
     private void getBestAsset() {
-        if (!blijdorpAssets.isEmpty()){
-            for (String p : blijdorpAssets) {
+        blijdorpAssets.add("@rotterdamzoo :) oceanium");
+        blijdorpAssets.add("@rotterdamzoo :) riverahal");
+        for (String p : blijdorpAssets) {
                 query = new Query(p);
                 fetchAndDrawTweets();
             }
-        }
 
     }// end of getBestAsset
 
