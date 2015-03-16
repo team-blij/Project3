@@ -36,7 +36,7 @@ public class Queries {
                 }
 //            	Uit welke provincie in Nederland komen de meeste bezoekers?
                 public String getProvince(){
-                    String query = "@rotterdamzoo"; //needs editing!
+                    String query = "@rotterdamzoo "; //needs editing!
                     return query;
                 }
 

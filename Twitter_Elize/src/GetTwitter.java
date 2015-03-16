@@ -12,9 +12,9 @@ public class GetTwitter {
     public Twitter twitterInstance;
     public Query query;
     public User Blijdorp = null;
-
+    private ArrayList<String> blijdorpAssets= new ArrayList<String>();
     public void getQuery(){
-        query = new Query("rotterdamzoo lang:nl");
+        query = new Query("rotterdamzoo " + "Blijdorp");
         setup();
 
     }
@@ -34,6 +34,7 @@ public class GetTwitter {
 
     private void fetchAndDrawTweets(){
         try{
+
             QueryResult result = twitterInstance.search(query);
             ArrayList tweets = (ArrayList) result.getTweets();
             for (int i = 0; i < result.getCount(); i++){
@@ -43,7 +44,10 @@ public class GetTwitter {
                 //The name of the user
                 String message = status.getText();
                 //The tweet
-                System.out.println(status + " " +  user + " " + message);
+                String geoLocation = status.getUser().getLocation();
+
+
+                System.out.println(status + " " + user + " " + message);
 
             }
         }catch(TwitterException te){
@@ -59,6 +63,12 @@ public class GetTwitter {
         System.out.println("User not found!");
         }
         return Blijdorp;
+    }// end of GetUser()
+
+    private void getBestAsset(){
+        for(String p: blijdorpAssets)
+        query = new Query("@rotterdamzoo :) " +  p);
+
     }
 
 }// end of GetTwitter class
