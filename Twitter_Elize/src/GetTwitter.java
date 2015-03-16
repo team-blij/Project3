@@ -29,12 +29,13 @@ public class GetTwitter {
 
             getBestAsset();
             //fetchAndDrawTweets();
-    
+
 
     }// end of setup()
 
     private void fetchAndDrawTweets(){
         try{
+
             QueryResult result = twitterInstance.search(query);
             ArrayList tweets = (ArrayList) result.getTweets();
             for (int i = 0; i < result.getCount(); i++){
