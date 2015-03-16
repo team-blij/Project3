@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         //Twitter call
         GetTwitter getTwitter = new GetTwitter();
-        getTwitter.getQuery();
+        getTwitter.setup();
 
         //Weather call
 //        try {

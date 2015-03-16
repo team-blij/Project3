@@ -10,16 +10,15 @@ import java.util.ArrayList;
 public class GetTwitter {
     ConfigurationBuilder cb = new ConfigurationBuilder();
     public Twitter twitterInstance;
-    public Query query;
+    public Query query = new Query("rotterdamzoo " + "Blijdorp");
     public User Blijdorp = null;
     private ArrayList<String> blijdorpAssets= new ArrayList<String>();
-    public void getQuery(){
-        query = new Query("rotterdamzoo " + "Blijdorp");
-        setup();
 
-    }
 
     public void setup(){
+
+            blijdorpAssets.add("@rotterdamzoo :) oceanium");
+            blijdorpAssets.add("@rotterdamzoo :) riverahal");
 
             cb.setOAuthConsumerKey("hYiZEb7KIq8xRzouCcHMHV8KG");
             cb.setOAuthConsumerSecret("KwBo9KEfb28iqx4MCzJLyfKiIUoKSY68Nw9un5xGKWSjb6MK8m");
@@ -28,7 +27,10 @@ public class GetTwitter {
             //All keys are from maventwitter
             twitterInstance = new TwitterFactory(cb.build()).getInstance();
 
-            fetchAndDrawTweets();
+
+            getBestAsset();
+            //fetchAndDrawTweets();
+
 
     }// end of setup()
 
@@ -65,10 +67,14 @@ public class GetTwitter {
         return Blijdorp;
     }// end of GetUser()
 
-    private void getBestAsset(){
-        for(String p: blijdorpAssets)
-        query = new Query("@rotterdamzoo :) " +  p);
+    private void getBestAsset() {
+        if (!blijdorpAssets.isEmpty()){
+            for (String p : blijdorpAssets) {
+                query = new Query(p);
+                fetchAndDrawTweets();
+            }
+        }
 
-    }
+    }// end of getBestAsset
 
 }// end of GetTwitter class
