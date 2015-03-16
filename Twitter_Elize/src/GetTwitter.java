@@ -1,7 +1,7 @@
 import twitter4j.*;
 import twitter4j.conf.*;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 
@@ -14,7 +14,8 @@ public class GetTwitter {
     public Query query = new Query("rotterdamzoo :)" + "Blijdorp");
 
     public User Blijdorp = null;
-    String[] blijdorpAssets = {"rotterdamzoo oceanium " , "@rotterdamzoo rivierahal :)"};
+    String[] blijdorpAssets = {"rotterdamzoo oceanium" , "rotterdamzoo rivierahal"};
+    String[] animals = {};
 
 
 
@@ -30,10 +31,11 @@ public class GetTwitter {
 
     }// end of setup()
 
-    private void fetchAndDrawTweets(){
+    private QueryResult fetchAndDrawTweets(){
         try{
             QueryResult result = twitterInstance.search(query);
             ArrayList tweets = (ArrayList) result.getTweets();
+
             for (int i = 0; i < result.getCount(); i++){
                 Status status = (Status) tweets.get(i);
                 //Information about date, id, source, if it is favorited, enz.
@@ -44,9 +46,12 @@ public class GetTwitter {
                 String geoLocation = status.getUser().getLocation();
                 //the location of the user
                 System.out.println(status + " " + user + " " + message);
+
             }
+            return result;
         }catch(TwitterException te){
             System.out.println("Couldn't connect!");
+            return null;
         }// end of catch
     }// end of fetchAndDrawTweets()
 
@@ -68,14 +73,40 @@ public class GetTwitter {
 
         try {
             for (String p : blijdorpAssets) {
-                query = new Query(p);
-                fetchAndDrawTweets();
-            }
+                query = new Query(p + ":)");
+                ArrayList tweets = (ArrayList) fetchAndDrawTweets();
 
+            }
         }catch(IndexOutOfBoundsException ex){
             System.out.println("Geen resultaten gevonden...");
 
         }
     }// end of getBestAsset
+//  Welk onderdeel van diergaarde Blijdorp vinden de bezoekers het minst leukst?
+    public void getWorstAspect(){
+        try {
+            for (String p : blijdorpAssets) {
+                query = new Query(p + ":(");
+                ArrayList tweets = (ArrayList) fetchAndDrawTweets();
+
+            }
+        }catch(IndexOutOfBoundsException ex){
+            System.out.println("Geen resultaten gevonden...");
+
+        }
+
+
+
+
+    }//end of getWorstAsset()
+
+//  Wat zijn de populairste dieren in diergaarde Blijdorp?
+    public void getBestAnimal(){
+
+
+
+    }//end of getBestAnimal()
+
+
 
 }// end of GetTwitter class
