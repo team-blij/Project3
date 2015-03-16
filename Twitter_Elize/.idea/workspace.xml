@@ -32,8 +32,8 @@
       <file leaf-file-name="GetTwitter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5553192" vertical-offset="0" max-vertical-offset="1513">
-              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.9404255" vertical-offset="0" max-vertical-offset="1513">
+              <caret line="26" column="75" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#429#437#0" expanded="true" />
@@ -469,12 +469,12 @@
       <workItem from="1426170160403" duration="342000" />
       <workItem from="1426234198285" duration="5604000" />
       <workItem from="1426334583876" duration="7001000" />
-      <workItem from="1426493013954" duration="3094000" />
+      <workItem from="1426493013954" duration="3464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33415000" />
+    <option name="totallyTimeSpent" value="33785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1224" height="728" extended-state="0" />
@@ -844,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5553192" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.9404255" vertical-offset="0" max-vertical-offset="1513">
+          <caret line="26" column="75" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#429#437#0" expanded="true" />
