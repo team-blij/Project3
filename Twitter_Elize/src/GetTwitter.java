@@ -95,18 +95,65 @@ public class GetTwitter {
 
         }
 
-
-
-
     }//end of getWorstAsset()
+
 
 //  Wat zijn de populairste dieren in diergaarde Blijdorp?
     public void getBestAnimal(){
+        for(String i: animals){
+            query = new Query(i);
+            ArrayList tweets = (ArrayList) fetchAndDrawTweets();
+            //There are no animals in the animals Array yet!
 
-
+        }//end of for loop
 
     }//end of getBestAnimal()
 
+//  Geografische analyse:
+//  --------------------------------------------------------------------------------------------------------------------
+//  Uit welk land buiten Nederland komen de meeste bezoekers?
+    public void getCountry(){
+            query = new Query("diergaarde Blijdorp" + "@rotterdamzoo");
+            ArrayList tweets = (ArrayList) fetchAndDrawTweets();
+            for(int i = 0; i < tweets.size(); i++){
+                Status tweet = (Status)tweets.get(i);
+                String location = null;
+            }// end of for loop
 
+
+    }//end of getCountry() NEEDS EDITING!
+
+//  Uit welke provincie in Nederland komen de meeste bezoekers?
+    public void getProvince(){
+        query = new Query("diergaarde Blijdorp" + "@rotterdamzoo");
+        ArrayList tweets = (ArrayList) fetchAndDrawTweets();
+        for(int i = 0; i < tweets.size(); i++) {
+            Status tweet = (Status) tweets.get(i);
+            String location = null;
+        }// end of for loop
+    }//end of getProvince() NEEDS EDITING!
+
+
+//    ++Meteorologische analyse:
+//    ------------------------------------------------------------------------------------------------------------------
+//    Heeft regenachtig weer een negatief effect op het aantal bezoeker?
+    public void getBadWeather(){
+
+    }// end of getBadWeather()
+
+    //            	Heeft zonnig weer een positief effect op het aantal bezoekers?
+    public void getGoodWeather(){
+
+    }//end of getGoodWeather()
+
+    //            	Heeft een lage temperatuur een negatief effect op het aantal bezoekers?
+    public void getLowTemperature(){
+
+    }// end of getLowTemperature()
+
+    //            	Heeft een hoge temperatuur een negatief effect op het aantal bezoekers?
+    public void getHighTemperature(){
+
+    }// end of getHighTemperature()
 
 }// end of GetTwitter class
