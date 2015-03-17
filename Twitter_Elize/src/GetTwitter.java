@@ -2,6 +2,7 @@ import twitter4j.*;
 import twitter4j.conf.*;
 
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 
@@ -26,8 +27,8 @@ public class GetTwitter {
             cb.setOAuthAccessTokenSecret("dTlH0Qa1kPbwXHCa5xkkRhkIyLeD2JvP2bqd1UhNeioID");
             //All keys are private! >:(
             twitterInstance = new TwitterFactory(cb.build()).getInstance();
-            getBestAsset();
-            //fetchAndDrawTweets();
+            //getBestAsset();
+            fetchAndDrawTweets();
 
     }// end of setup()
 
@@ -35,7 +36,6 @@ public class GetTwitter {
         try{
             QueryResult result = twitterInstance.search(query);
             ArrayList tweets = (ArrayList) result.getTweets();
-
             for (int i = 0; i < result.getCount(); i++){
                 Status status = (Status) tweets.get(i);
                 //Information about date, id, source, if it is favorited, enz.
@@ -46,6 +46,7 @@ public class GetTwitter {
                 String geoLocation = status.getUser().getLocation();
                 //the location of the user
                 System.out.println(status + " " + user + " " + message);
+                Database database = new Database();
 
             }
             return result;

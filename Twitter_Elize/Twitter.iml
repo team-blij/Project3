@@ -11,5 +11,6 @@
     <orderEntry type="library" exported="" name="Twitter4J" level="project" />
     <orderEntry type="library" name="owm-japis-2.5.0.5" level="project" />
     <orderEntry type="library" name="java-json" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.34-bin" level="project" />
   </component>
 </module>
