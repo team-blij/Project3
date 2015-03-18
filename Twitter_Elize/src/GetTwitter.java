@@ -1,24 +1,21 @@
 import twitter4j.*;
 import twitter4j.conf.*;
-
-
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-
 /**
  * Created by Elize on 10-3-2015.
  */
 public class GetTwitter {
     ConfigurationBuilder cb = new ConfigurationBuilder();
-    public Twitter twitterInstance;
+    public Twitter twitterInstance = null;
     public Query query = new Query("rotterdamzoo :)" + "Blijdorp");
+    //The Twitter instances
 
     public User Blijdorp = null;
     String[] blijdorpAssets = {"rotterdamzoo oceanium" , "rotterdamzoo rivierahal"};
     String[] animals = {};
-
-
+    GetWeather getWeather = null;
+    //Variables that are needed for gathering data
 
     public void setup(){
             cb.setOAuthConsumerKey("BiTybWWcHtZfNDF6k27XQysZo");
@@ -27,7 +24,6 @@ public class GetTwitter {
             cb.setOAuthAccessTokenSecret("dTlH0Qa1kPbwXHCa5xkkRhkIyLeD2JvP2bqd1UhNeioID");
             //All keys are private! >:(
             twitterInstance = new TwitterFactory(cb.build()).getInstance();
-            //getBestAsset();
             fetchAndDrawTweets();
 
     }// end of setup()
@@ -59,10 +55,9 @@ public class GetTwitter {
     public User GetUser(){
         try {
             Blijdorp = twitterInstance.showUser("rotterdamzoo");
-
         }catch(TwitterException t){
         System.out.println("User not found!");
-        }
+        }// end of catch
         return Blijdorp;
     }// end of GetUser()
 
@@ -135,26 +130,54 @@ public class GetTwitter {
     }//end of getProvince() NEEDS EDITING!
 
 
+
 //    ++Meteorologische analyse:
 //    ------------------------------------------------------------------------------------------------------------------
 //    Heeft regenachtig weer een negatief effect op het aantal bezoeker?
     public void getBadWeather(){
-
+        getWeather = new GetWeather();
     }// end of getBadWeather()
 
     //            	Heeft zonnig weer een positief effect op het aantal bezoekers?
     public void getGoodWeather(){
-
+        getWeather = new GetWeather();
     }//end of getGoodWeather()
 
     //            	Heeft een lage temperatuur een negatief effect op het aantal bezoekers?
     public void getLowTemperature(){
-
+        getWeather = new GetWeather();
     }// end of getLowTemperature()
 
     //            	Heeft een hoge temperatuur een negatief effect op het aantal bezoekers?
     public void getHighTemperature(){
-
+        getWeather = new GetWeather();
     }// end of getHighTemperature()
+
+
+//  ++Response analyse
+//  --------------------------------------------------------------------------------------------------------------------
+//  Hoe vaak is Diergaarde Blijdorp actief of twitter?
+    public void getResponseBlijdorp(){
+        query = new Query("from:rotterdamzoo");
+        ArrayList tweets = (ArrayList) fetchAndDrawTweets();
+
+    }//end of getResponseBlijdorp
+
+//  Waar tweet Diergaarde Blijdorp het meest over?
+    public void getTweetsBlijdorp(){
+        query = new Query("from:rotterdamzoo");
+        ArrayList tweets = (ArrayList) fetchAndDrawTweets();
+
+    }//end of getTweetsBlijdorp()
+
+//  Stijgt of daalt het aantal followers van Blijdorp (per week)?
+    public void getFollowersBlijdorp(){
+        User user = GetUser();
+        int amount_of_followers = user.getFollowersCount();
+
+    }// end of getFollowersBlijdorp()
+
+
+
 
 }// end of GetTwitter class

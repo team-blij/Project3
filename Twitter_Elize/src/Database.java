@@ -13,24 +13,23 @@ public class Database {
     public void connectToDatabase() throws SQLException {
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
             connection = DriverManager.getConnection(
                     //The adres of the server
-                    "jdbc:mysql://localhost:3306",
+                    "jdbc:sqlserver://145.24.222.198",
                     //username
-                    "root",
+                    "0891435",
                     //password
-                    null
+                    "B14sK8"
                     );
             System.out.println("U heeft verbinding");
         }catch(SQLException ex){
             System.out.println("Er kon geen verbinding worden gemaakt.");
         }catch(ClassNotFoundException ex){
+            System.out.println("Class not found...");
             System.exit(0);
         }
-        //createTable();
-        getTable();
 
     }//end of connectToDatabase()
 

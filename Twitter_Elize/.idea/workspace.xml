@@ -32,10 +32,18 @@
       <file leaf-file-name="GetTwitter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2822">
-              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1601" max-vertical-offset="3213">
+              <caret line="129" column="42" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5098#5099#0" expanded="true" />
+                <element signature="e#5143#5144#0" expanded="true" />
+                <element signature="e#5285#5286#0" expanded="true" />
+                <element signature="e#5330#5331#0" expanded="true" />
+                <element signature="e#5484#5485#0" expanded="true" />
+                <element signature="e#5529#5530#0" expanded="true" />
+                <element signature="e#5688#5689#0" expanded="true" />
+                <element signature="e#5733#5734#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,25 +52,25 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.4851694" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.46822035" vertical-offset="102" max-vertical-offset="1411">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1426602195845" expanded="true" signature="1134:1147" placeholder="CREATE TABLE..missingValue..." />
-                <marker date="1426602195845" expanded="true" signature="1134:1153" placeholder="CREATE TABLE..Tweets..." />
-                <marker date="1426602195845" expanded="true" signature="1134:1208" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1426602195845" expanded="true" signature="1134:1289" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1426602195845" expanded="true" signature="1134:1339" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1426602195845" expanded="true" signature="1134:1355" placeholder="CREATE TABLE..missingValue..." />
-                <marker date="1426602195845" expanded="true" signature="1134:1362" placeholder="CREATE TABLE..Tweets..." />
-                <marker date="1426602195845" expanded="true" signature="1557:1577" placeholder="SELECT FROM Tweets..." />
-                <marker date="1426602195845" expanded="true" signature="1557:1579" placeholder="SELECT FROM Tweets..." />
-                <marker date="1426602195845" expanded="true" signature="1867:1879" placeholder="INSERT INTO ..." />
-                <marker date="1426602195845" expanded="true" signature="1867:1956" placeholder="INSERT INTO ..." />
-                <marker date="1426602195845" expanded="true" signature="1867:2025" placeholder="INSERT INTO ..." />
-                <marker date="1426602195845" expanded="true" signature="1867:2093" placeholder="INSERT INTO ..." />
-                <marker date="1426602195845" expanded="true" signature="1867:2094" placeholder="INSERT INTO ..." />
-                <marker date="1426602195845" expanded="true" signature="1867:2163" placeholder="INSERT INTO ..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1190" placeholder="CREATE TABLE..missingValue..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1196" placeholder="CREATE TABLE..Tweets..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1251" placeholder="CREATE TABLE..Tweetsmessage..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1332" placeholder="CREATE TABLE..Tweetsmessage..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1382" placeholder="CREATE TABLE..Tweetsmessage..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1398" placeholder="CREATE TABLE..missingValue..." />
+                <marker date="1426692164748" expanded="true" signature="1177:1405" placeholder="CREATE TABLE..Tweets..." />
+                <marker date="1426692164748" expanded="true" signature="1600:1620" placeholder="SELECT FROM Tweets..." />
+                <marker date="1426692164748" expanded="true" signature="1600:1622" placeholder="SELECT FROM Tweets..." />
+                <marker date="1426692164748" expanded="true" signature="1910:1922" placeholder="INSERT INTO ..." />
+                <marker date="1426692164748" expanded="true" signature="1910:1999" placeholder="INSERT INTO ..." />
+                <marker date="1426692164748" expanded="true" signature="1910:2068" placeholder="INSERT INTO ..." />
+                <marker date="1426692164748" expanded="true" signature="1910:2136" placeholder="INSERT INTO ..." />
+                <marker date="1426692164748" expanded="true" signature="1910:2137" placeholder="INSERT INTO ..." />
+                <marker date="1426692164748" expanded="true" signature="1910:2206" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -71,20 +79,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Queries.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Queries.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1751">
-              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="765">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,7 +136,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,6 +170,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,15 +497,16 @@
       <workItem from="1426502671133" duration="1374000" />
       <workItem from="1426505489601" duration="4372000" />
       <workItem from="1426584845696" duration="8647000" />
+      <workItem from="1426689229309" duration="3906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49937000" />
+    <option name="totallyTimeSpent" value="53843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -522,10 +519,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19354838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19354838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09851852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18222222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -577,10 +574,71 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2822">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1426692164748" expanded="true" signature="1177:1190" placeholder="CREATE TABLE..missingValue..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1196" placeholder="CREATE TABLE..Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1251" placeholder="CREATE TABLE..Tweetsmessage..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1332" placeholder="CREATE TABLE..Tweetsmessage..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1382" placeholder="CREATE TABLE..Tweetsmessage..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1398" placeholder="CREATE TABLE..missingValue..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1405" placeholder="CREATE TABLE..Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1600:1620" placeholder="SELECT FROM Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1600:1622" placeholder="SELECT FROM Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1910:1922" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:1999" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2068" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2136" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2137" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2206" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2180" max-vertical-offset="2805">
           <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -595,22 +653,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1751">
-          <caret line="71" column="17" selection-start-line="43" selection-start-column="15" selection-end-line="71" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -619,16 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="129" max-vertical-offset="612">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1751">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -641,6 +687,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -655,22 +709,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1751">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -685,22 +737,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1751">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1190">
           <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,22 +765,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1751">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -745,22 +793,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1751">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,6 +834,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -815,6 +869,14 @@
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,6 +897,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -862,6 +932,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,6 +967,14 @@
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,6 +1002,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -934,30 +1028,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1751">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2822">
-          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1601" max-vertical-offset="3213">
+          <caret line="129" column="42" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5330#5331#0" expanded="true" />
+            <element signature="e#5484#5485#0" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5733#5734#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="765">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -966,25 +1058,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4851694" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.46822035" vertical-offset="102" max-vertical-offset="1411">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426602195845" expanded="true" signature="1134:1147" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1426602195845" expanded="true" signature="1134:1153" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1426602195845" expanded="true" signature="1134:1208" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1426602195845" expanded="true" signature="1134:1289" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1426602195845" expanded="true" signature="1134:1339" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1426602195845" expanded="true" signature="1134:1355" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1426602195845" expanded="true" signature="1134:1362" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1426602195845" expanded="true" signature="1557:1577" placeholder="SELECT FROM Tweets..." />
-            <marker date="1426602195845" expanded="true" signature="1557:1579" placeholder="SELECT FROM Tweets..." />
-            <marker date="1426602195845" expanded="true" signature="1867:1879" placeholder="INSERT INTO ..." />
-            <marker date="1426602195845" expanded="true" signature="1867:1956" placeholder="INSERT INTO ..." />
-            <marker date="1426602195845" expanded="true" signature="1867:2025" placeholder="INSERT INTO ..." />
-            <marker date="1426602195845" expanded="true" signature="1867:2093" placeholder="INSERT INTO ..." />
-            <marker date="1426602195845" expanded="true" signature="1867:2094" placeholder="INSERT INTO ..." />
-            <marker date="1426602195845" expanded="true" signature="1867:2163" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1190" placeholder="CREATE TABLE..missingValue..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1196" placeholder="CREATE TABLE..Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1251" placeholder="CREATE TABLE..Tweetsmessage..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1332" placeholder="CREATE TABLE..Tweetsmessage..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1382" placeholder="CREATE TABLE..Tweetsmessage..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1398" placeholder="CREATE TABLE..missingValue..." />
+            <marker date="1426692164748" expanded="true" signature="1177:1405" placeholder="CREATE TABLE..Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1600:1620" placeholder="SELECT FROM Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1600:1622" placeholder="SELECT FROM Tweets..." />
+            <marker date="1426692164748" expanded="true" signature="1910:1922" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:1999" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2068" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2136" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2137" placeholder="INSERT INTO ..." />
+            <marker date="1426692164748" expanded="true" signature="1910:2206" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
