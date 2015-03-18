@@ -27,9 +27,9 @@ public class Database {
         }catch(SQLException ex){
             System.out.println("Er kon geen verbinding worden gemaakt.");
         }catch(ClassNotFoundException ex){
-            System.out.println("Class not found...");
-            System.exit(0);
-        }
+                    System.out.println("Class not found...");
+                    System.exit(0);
+                }
 
     }//end of connectToDatabase()
 
