@@ -47,6 +47,7 @@ public class WeatherJson {
 
 
   public static void main(String[] args)   {
+      
       WeatherData();
   }
     public static JSONObject getJsondata(String url) throws IOException, JSONException
@@ -76,8 +77,7 @@ public class WeatherJson {
       } catch (IOException ex) {
           Logger.getLogger(WeatherJson.class.getName()).log(Level.SEVERE, null, ex);
       } catch (JSONException ex) {
-          System.out.println("Requesting data again!");
-          WeatherData();
+          Logger.getLogger(WeatherJson.class.getName()).log(Level.SEVERE, null, ex);
       } 
     }
 }
