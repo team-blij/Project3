@@ -29,14 +29,13 @@ import java.sql.Statement;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import org.json.JSONArray;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class twitterjsonparse {
+public class geotwittercombo {
 
     public static Authentication hosebirdAuth = new OAuth1("hYiZEb7KIq8xRzouCcHMHV8KG", "KwBo9KEfb28iqx4MCzJLyfKiIUoKSY68Nw9un5xGKWSjb6MK8m", "543574610-XMJxyBrK7rIpWoSAZwy2je3EXdsIUfiwtW0vvGX2", "PTfk8qYKw711DQv9jsW6OTjQSZrUr9mw3M6JfP2QNCjIF");
 
