@@ -14,17 +14,20 @@ public class Database {
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Class.forName("com.mysql.jdbc.Driver");
 
             connection = DriverManager.getConnection(
                     //The adres of the server
-                    "jdbc:sqlserver://145.24.222.198:80",
+                    //"jdbc:mysql://145.24.222.198:3306",
+                    "jdbc:sqlserver://145.24.222.198:3306",
                     //username
-                    "0891435",
+                    "root",
                     //password
-                    "B14sK8"
+                    "blijdorp"
                     );
             System.out.println("U heeft verbinding");
         }catch(SQLException ex){
+            System.out.println(ex.getSQLState());
             System.out.println("Er kon geen verbinding worden gemaakt.");
         }catch(ClassNotFoundException ex){
                     System.out.println("Class not found...");
