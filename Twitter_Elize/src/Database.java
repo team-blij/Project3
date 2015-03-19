@@ -17,7 +17,7 @@ public class Database {
 
             connection = DriverManager.getConnection(
                     //The adres of the server
-                    "jdbc:sqlserver://145.24.222.198",
+                    "jdbc:sqlserver://145.24.222.198:80",
                     //username
                     "0891435",
                     //password

@@ -62,7 +62,7 @@ public class GetTwitter {
     }// end of GetUser()
 
 
-//  Sentiment analyse:
+//  ++Sentiment analyse:
 //  --------------------------------------------------------------------------------------------------------------------
 //  Welk onderdeel van diergaarde Blijdorp vinden de bezoekers het leukst?
     private void getBestAsset() {
@@ -105,7 +105,7 @@ public class GetTwitter {
 
     }//end of getBestAnimal()
 
-//  Geografische analyse:
+//  ++Geografische analyse:
 //  --------------------------------------------------------------------------------------------------------------------
 //  Uit welk land buiten Nederland komen de meeste bezoekers?
     public void getCountry(){
