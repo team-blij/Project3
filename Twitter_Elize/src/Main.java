@@ -12,8 +12,8 @@ public class Main {
 
     public static void main(String[] args) {
         //Twitter call
-//        GetTwitter getTwitter = new GetTwitter();
-//        getTwitter.setup();
+        GetTwitter getTwitter = new GetTwitter();
+        getTwitter.setup();
 
         //Weather call
 //        try {
@@ -26,13 +26,13 @@ public class Main {
 //        }
 
         //Database call
-        Database database = new Database();
-        try {
-            database.connectToDatabase();
-        }catch(SQLException ex){
-            System.exit(1);
-
-        }
+//        Database database = new Database();
+//        try {
+//            database.connectToDatabase();
+//        }catch(SQLException ex){
+//            System.exit(1);
+//
+//        }
 
     }
 
