@@ -2,6 +2,10 @@
  * Created by Elize on 17-3-2015.
  */
 
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.sql.*;
 
 public class Database {
@@ -16,10 +20,11 @@ public class Database {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             Class.forName("com.mysql.jdbc.Driver");
 
-            connection = DriverManager.getConnection(
+           connection = DriverManager.getConnection(
                     //The adres of the server
-                    //"jdbc:mysql://145.24.222.198:3306",
-                    "jdbc:sqlserver://145.24.222.198:3306",
+                    //"jdbc:mysql://145.24.222.198:1433",
+                    "jdbc:sqlserver://145.24.222.198\\SQLEXPRESS;databaseName=Blijdorp",
+                   //"jdbc:mysql://127.0.0.1:3306" ,
                     //username
                     "root",
                     //password
@@ -27,12 +32,13 @@ public class Database {
                     );
             System.out.println("U heeft verbinding");
         }catch(SQLException ex){
-            System.out.println(ex.getSQLState());
             System.out.println("Er kon geen verbinding worden gemaakt.");
+            ex.printStackTrace();
         }catch(ClassNotFoundException ex){
                     System.out.println("Class not found...");
                     System.exit(0);
-                }
+        }
+
 
     }//end of connectToDatabase()
 
