@@ -23,7 +23,7 @@ public class Database {
            connection = DriverManager.getConnection(
                     //The adres of the server
                     //"jdbc:mysql://145.24.222.198:1433",
-                    "jdbc:sqlserver://145.24.222.198\\SQLEXPRESS;databaseName=Blijdorp",
+                    "jdbc:sqlserver://145.24.222.198\\SQLEXPRESS",
                    //"jdbc:mysql://127.0.0.1:3306" ,
                     //username
                     "root",
