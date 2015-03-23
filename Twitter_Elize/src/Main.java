@@ -15,24 +15,24 @@ public class Main {
 //        GetTwitter getTwitter = new GetTwitter();
 //        getTwitter.setup();
 
-        //Weather call
-//        try {
-//            GetWeather getWeather = new GetWeather();
-//            getWeather.getWeatherAt();
-//        }catch(IOException ex  ){
-//            System.exit(1);
-//        }catch(JSONException json){
-//            System.exit(1);
-//        }
+       // Weather call
+        try {
+            GetWeather getWeather = new GetWeather();
+            getWeather.getWeatherAt();
+        }catch(IOException ex  ){
+            System.exit(1);
+        }catch(JSONException json){
+            System.exit(1);
+        }
 
         //Database call
-        Database database = new Database();
-        try {
-            database.connectToDatabase();
-        }catch(SQLException ex){
-            System.exit(1);
-
-        }
+//        Database database = new Database();
+//        try {
+//            database.connectToDatabase();
+//        }catch(SQLException ex){
+//            System.exit(1);
+//
+//        }
 
     }
 

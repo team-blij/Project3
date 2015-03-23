@@ -14,7 +14,11 @@ public class Database {
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
-    public void connectToDatabase() throws SQLException {
+    public Database(){
+        connectToDatabase();
+
+    }
+    public void connectToDatabase(){
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -22,13 +26,13 @@ public class Database {
 
            connection = DriverManager.getConnection(
                     //The adres of the server
-                    //"jdbc:mysql://145.24.222.198:1433",
-                    "jdbc:sqlserver://145.24.222.198\\SQLEXPRESS",
+                    //"jdbc:mysql://145.24.222.198\\SQLEXPRESS:3306",
+                    "jdbc:sqlserver://169.254.119.142:1433",
                    //"jdbc:mysql://127.0.0.1:3306" ,
                     //username
                     "root",
                     //password
-                    "blijdorp"
+                    ""
                     );
             System.out.println("U heeft verbinding");
         }catch(SQLException ex){
@@ -61,13 +65,9 @@ public class Database {
             String sql = "SELECT FROM Tweets * "
                     ;
         statement.executeUpdate(sql);
-
-
-
-
     }//end of getTable()
 
-    public void insertIntoTable(String tableName, String message, Long user_id, String username) throws SQLException{
+    public void insertTweetIntoTable(String tableName, String message, Long user_id, String username) throws SQLException{
         statement = connection.createStatement();
             String sql =    "INSERT INTO "
                         +   tableName
@@ -77,10 +77,37 @@ public class Database {
                         +   user_id
                         +   ", "
                         +   username
-                        +   ")"
+                        +   ");"
                     ;
         statement.executeUpdate(sql);
+
     }// end of insertIntoTable()
+
+    public void insertWeatherData(String city, float minTemperature, float maxTemperature, float averageTemperature,
+                                  Date date, float rain, float wind, float snow, float clouds) throws SQLException{
+                    statement = connection.createStatement();
+                    String sql =        "INSERT INTO Weather VALUES ("
+                                  +     city
+                                  +     ", "
+                                  +     minTemperature
+                                  +     ", "
+                                  +     maxTemperature
+                                  +     ", "
+                                  +     averageTemperature
+                                  +     ", "
+                                  +     date
+                                  +     ", "
+                                  +     rain
+                                  +     ", "
+                                  +     wind
+                                  +     ", "
+                                  +     snow
+                                  +     ", "
+                                  +     clouds
+                                  +     ");"
+                            ;
+                    statement.execute(sql);
+    }//end of insertWeatherData()
 
 
 }// end of class Database
