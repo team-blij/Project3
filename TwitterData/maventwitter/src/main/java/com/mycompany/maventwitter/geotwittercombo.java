@@ -21,11 +21,8 @@ import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -45,14 +42,18 @@ public class geotwittercombo {
      *
      * @param args
      * @throws java.lang.InterruptedException
+     * @throws org.json.JSONException
+     * @throws java.io.IOException
+     * @throws java.sql.SQLException
+     * @throws java.lang.ClassNotFoundException
      */
-    public static void main(String[] args) throws InterruptedException, JSONException, IOException {
+    public static void main(String[] args) throws InterruptedException, JSONException, IOException, SQLException, ClassNotFoundException {
 
-        //twitter4jmodule();
+        
         extraTestModule();
-                //JsonReader.readJsons();
+        //JsonReader.readJsons();
         //connectToAndQueryDatabase();
-
+        
     }
 
     /**
@@ -94,16 +95,23 @@ public class geotwittercombo {
 
 //            System.out.println(json.toString());
             try {
+                
+                
+                
                 String twitterText = json.getString("text");
-
+                
                 userJson = json.getJSONObject("user");
 
-                
-
                 String twitterName = userJson.getString("name");
-
+                
+                try{
+                    System.out.println("Proberen");
+                connectToAndQueryDatabase(json.getLong("id"),twitterName,twitterText);}
+                catch(SQLException | ClassNotFoundException e)
+                {
+                    System.out.println("Gefaald");
+                }
                 //System.out.println(twitterName + ": " + twitterText);
-
                 String twitterGeo = json.getString("geo");
 
                 if (twitterGeo.equals("null")) {
@@ -146,7 +154,7 @@ public class geotwittercombo {
                 text++;
 
                 //System.out.println(twitterGeo);
-            } catch (Exception e) {
+            } catch (JSONException | IOException e) {
 
                 noText++;
             }
@@ -157,24 +165,36 @@ public class geotwittercombo {
         double totalTweets = text + noText;
         double percentage = text / totalTweets * 100;
         System.out.println("Of the " + totalTweets + " tweets, " + text + " had text,that is " + percentage + "% of the tweets.");
-        System.out.println("Of those " + text + " tweets, " + geo + " had geodata. That is "+geo/text*100 +"% of the tweets.");
+        System.out.println("Of those " + text + " tweets, " + geo + " had geodata. That is " + geo / text * 100 + "% of the tweets.");
 
     }
 
-    public static void connectToAndQueryDatabase() throws SQLException, ClassNotFoundException {
+    public static void connectToAndQueryDatabase(long id, String naam, String text) throws SQLException, ClassNotFoundException {
+            
+        
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitterdata", "root", "blijdorp");
+           
+            
+            Statement stmt = con.createStatement();
+            
+            stmt.execute("insert into BlijdorpTweets values("+id+",\""+ naam + "\",\" "+ text + "\");");
+            
+            //ResultSet rs = stmt.executeQuery("SELECT * FROM BlijdorpTweets");
+            //while (rs.next()) {
+                //int x = rs.getInt("id");
+               // String s = rs.getString("twittername");
+                //String f = rs.getString("twittertext");
+                //System.out.println(x + s + f);
+          // }
+        
+            
+        
 
-        Class.forName("com.mysql.jdbc.Driver");
-
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitterdata", "hans", "wachtwoord");
-
-        Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT id, twittername, twittertext FROM BlijdorpTweets");
-
-        while (rs.next()) {
-            int x = rs.getInt("id");
-            String s = rs.getString("twittername");
-            String f = rs.getString("twittertext");
-        }
+    }
+    
+    public static void test()
+    {
+        System.out.println("stap 1");
     }
 
 }
