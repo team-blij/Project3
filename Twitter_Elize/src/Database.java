@@ -2,11 +2,13 @@
  * Created by Elize on 17-3-2015.
  */
 
+import net.sourceforge.jtds.jdbc.*;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.*;
+
 
 public class Database {
     private Connection connection = null;
@@ -16,48 +18,53 @@ public class Database {
 
     public Database(){
         connectToDatabase();
-
+        useDatabase();
     }
-    public void connectToDatabase(){
+    private void connectToDatabase(){
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+
 
            connection = DriverManager.getConnection(
                     //The adres of the server
-                    //"jdbc:mysql://145.24.222.198\\SQLEXPRESS:3306",
-                    "jdbc:sqlserver://169.254.119.142:1433",
-                   //"jdbc:mysql://127.0.0.1:3306" ,
+                    "jdbc:mysql://145.24.222.198:3306/twitter",
+                    //"jdbc:sqlserver://169.254.119.142:1433",
                     //username
                     "root",
                     //password
-                    ""
+                    "blijdorp"
                     );
             System.out.println("U heeft verbinding");
         }catch(SQLException ex){
             System.out.println("Er kon geen verbinding worden gemaakt.");
             ex.printStackTrace();
         }catch(ClassNotFoundException ex){
-                    System.out.println("Class not found...");
                     System.exit(0);
         }
 
 
     }//end of connectToDatabase()
 
+    private void useDatabase(){
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate("USE projectdata; ");
+        }catch (SQLException ex){
+        }
+
+    }
 
     private void createTable() throws SQLException{
         statement = connection.createStatement();
-
             String sql = "CREATE TABLE Tweets"
                     +   "message    MESSAGE_TEXT(500)   NOT NULL "
                     +   "user_id    VARCHAR(255)        PRIMARY KEY"
                     +   "username   VARCHAR(255)"
                     ;
-
         statement.executeUpdate(sql);
-
     }//end of createTable()
 
     private void getTable() throws SQLException{

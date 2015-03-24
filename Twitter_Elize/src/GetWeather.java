@@ -29,6 +29,17 @@ public class GetWeather {
     private java.sql.Date date = null;
     private Database database = new Database();
 
+    public GetWeather(){
+        try {
+            getWeatherAt();
+        }catch(IOException ex  ){
+            System.exit(1);
+        }catch(JSONException json){
+            System.exit(1);
+        }
+
+    }
+
 
     public void getWeatherAt() throws IOException, MalformedURLException, JSONException {
 

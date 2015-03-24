@@ -17,7 +17,12 @@ public class GetTwitter {
     GetWeather getWeather = null;
     //Variables that are needed for gathering data
 
-    public void setup(){
+    public GetTwitter(){
+        setup();
+
+
+    }
+    private void setup(){
             cb.setOAuthConsumerKey("BiTybWWcHtZfNDF6k27XQysZo");
             cb.setOAuthConsumerSecret("SarY78keJf2LRJJS38xFbpjizvkFbKDxg0eULV5NJQ36TxJW07");
             cb.setOAuthAccessToken("3092334623-zofIrzyqSpVlnYHq42ozb2ubz9uU3d6D5CmcMfA");
