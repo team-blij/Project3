@@ -36,6 +36,8 @@ public class GetWeather {
             System.exit(1);
         }catch(JSONException json){
             System.exit(1);
+        }finally {
+            database.closeDatabase();
         }
 
     }
@@ -64,7 +66,7 @@ public class GetWeather {
                         wind = currentWeather.getWindInstance().getWindGust();
                     }
                 averageTemperature = Math.round(((minTemperature + maxTemperature) / 2));
-                System.out.println("De gemiddelde temperatuur in Rotterdam is: " + averageTemperature + date);
+
                 try{
                 database.insertWeatherData(city, minTemperature, maxTemperature, averageTemperature, date, rain, wind, snow, clouds);
                 }catch(SQLException ex){

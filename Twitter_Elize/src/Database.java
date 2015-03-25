@@ -17,16 +17,26 @@ public class Database {
     private ResultSet resultSet = null;
 
     public Database(){
+
         connectToDatabase();
         useDatabase();
-    }
+//        try {
+//            statement = connection.createStatement();
+//            statement.executeUpdate("DROP TABLE tweets");
+//        }catch (SQLException ex){
+//        }
+//        createTable();
+
+
+
+    }//end of constructor
+
     private void connectToDatabase(){
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             Class.forName("com.mysql.jdbc.Driver");
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-
 
            connection = DriverManager.getConnection(
                     //The adres of the server
@@ -37,6 +47,7 @@ public class Database {
                     //password
                     "blijdorp"
                     );
+
             System.out.println("U heeft verbinding");
         }catch(SQLException ex){
             System.out.println("Er kon geen verbinding worden gemaakt.");
@@ -57,14 +68,36 @@ public class Database {
 
     }
 
-    private void createTable() throws SQLException{
+    private void createTable() {
+        try{
         statement = connection.createStatement();
             String sql = "CREATE TABLE Tweets"
-                    +   "message    MESSAGE_TEXT(500)   NOT NULL "
-                    +   "user_id    VARCHAR(255)        PRIMARY KEY"
-                    +   "username   VARCHAR(255)"
+                    +   "(  message    LONGTEXT      NOT NULL "
+                    +   ",  user_id    VARCHAR(255)        PRIMARY KEY"
+                    +   ",  username   VARCHAR(255)"
+                    +   ",  location   VARCHAR(255)"
+                    +   ",  create_date DATE "
+                    +   ");"
                     ;
+           // database.insertWeatherData(city, minTemperature, maxTemperature, averageTemperature, date, rain, wind, snow, clouds);
+//                String sql =        "CREATE TABLE WEATHER"
+//                                +   "( city VARCHAR(255) NOT NULL"
+//                                +   ", min_Temperature FLOAT "
+//                                +   ", max_Temperature FLOAT"
+//                                +   ", average_Temperature FLOAT"
+//                                +   ", date DATE "
+//                                +   ", rain FLOAT"
+//                                +   ", wind_Gust FLOAT"
+//                                +   ", snow FLOAT "
+//                                +   ", cloud_Percentage FLOAT ); "
+//
+//                        ;
         statement.executeUpdate(sql);
+        }catch(SQLException ex)
+        {
+            System.out.println("Tabel niet gemaakt!");
+            System.out.println(ex);
+        }
     }//end of createTable()
 
     private void getTable() throws SQLException{
@@ -74,19 +107,29 @@ public class Database {
         statement.executeUpdate(sql);
     }//end of getTable()
 
-    public void insertTweetIntoTable(String tableName, String message, Long user_id, String username) throws SQLException{
-        statement = connection.createStatement();
-            String sql =    "INSERT INTO "
-                        +   tableName
-                        +   "VALUES ("
-                        +   message
-                        +   ", "
-                        +   user_id
-                        +   ", "
-                        +   username
-                        +   ");"
-                    ;
-        statement.executeUpdate(sql);
+    public void insertTweetIntoTable(String tableName, String message, Long user_id, String username, String location, Date date){
+        try {
+            statement = connection.createStatement();
+            String sql = "INSERT INTO "
+                    + tableName
+                    + "(message, user_id, username, location, create_date) "
+                    + "VALUES ("
+                    + message
+                    + ", "
+                    + user_id
+                    + ", "
+                    + username
+                    + ", "
+                    + location
+                    + ", "
+                    + date
+                    + ");";
+            statement.executeUpdate(sql);
+        }catch(SQLException ex){
+
+            System.out.println("Niet ingevoerd. Er is een fout opgetreden.");
+            System.out.println(ex);
+        }
 
     }// end of insertIntoTable()
 
@@ -116,5 +159,15 @@ public class Database {
                     statement.execute(sql);
     }//end of insertWeatherData()
 
+    public void closeDatabase(){
+        try {
+            if(!connection.isClosed()){
+                connection.close();
+                System.out.println("Database closed");
+            }
+        }catch(SQLException ex){
+
+        }
+    }// end of closeDatabase()
 
 }// end of class Database

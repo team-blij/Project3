@@ -1,5 +1,7 @@
 import twitter4j.*;
 import twitter4j.conf.*;
+
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 /**
@@ -15,11 +17,15 @@ public class GetTwitter {
     String[] blijdorpAssets = {"rotterdamzoo oceanium" , "rotterdamzoo rivierahal"};
     String[] animals = {};
     GetWeather getWeather = null;
+    Database database = new Database();
     //Variables that are needed for gathering data
 
     public GetTwitter(){
-        setup();
-
+        try {
+            setup();
+        }finally {
+            database.closeDatabase();
+        }
 
     }
     private void setup(){
@@ -46,8 +52,12 @@ public class GetTwitter {
                 //The tweet
                 String geoLocation = status.getUser().getLocation();
                 //the location of the user
-                System.out.println(status + " " + user + " " + message);
-                Database database = new Database();
+                java.util.Date dateUtil = status.getCreatedAt();
+                Date date = new java.sql.Date(dateUtil.getTime());
+                System.out.println(message);
+
+                database.insertTweetIntoTable("Tweets", message, status.getUser().getId(), user, geoLocation, date);
+
 
             }
             return result;

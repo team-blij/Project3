@@ -11,18 +11,18 @@ import java.sql.SQLException;
 public class Main {
 
     public static void main(String[] args) {
-        //Twitter call
-//        GetTwitter getTwitter = new GetTwitter();
-//
 
-       // Weather call
+        //Twitter call
+
+       GetTwitter getTwitter = new GetTwitter();
+
+        // Weather call
 //        GetWeather getWeather = new GetWeather();
 
 
         //Database call
-        Database database = new Database();
+       // Database database = new Database();
 
 
     }
-
-}
+}//end of main class
