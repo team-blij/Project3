@@ -1,5 +1,6 @@
 import org.json.JSONException;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -17,11 +18,14 @@ public class Main {
        //GetTwitter getTwitter = new GetTwitter();
 
         // Weather call
-        GetWeather getWeather = new GetWeather();
+        //GetWeather getWeather = new GetWeather();
 
 
         //Database call
        //Database database = new Database();
+
+        GetData getData = new GetData();
+
 
 
     }

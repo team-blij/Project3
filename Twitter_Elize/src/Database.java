@@ -58,11 +58,15 @@ public class Database {
     }//end of useDatabase()
 
 
-    private void getTable() throws SQLException{
-        statement = connection.createStatement();
-            String sql = "SELECT FROM Tweets * "
-                    ;
-        statement.executeUpdate(sql);
+    public ResultSet getAllTweets() {
+        try {
+            statement = connection.createStatement();
+            String sql = "SELECT * FROM tweet; ";
+            resultSet = statement.executeQuery(sql);
+            return resultSet;
+        }catch(SQLException ex){
+            return null;
+        }
     }//end of getTable()
 
     public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String location, Long twitterUser_idAccount, Long area_idArea, String user_Name, int followers, Long id_User, Long animal_idAnimal){
@@ -139,4 +143,28 @@ public class Database {
         }
     }// end of closeDatabase()
 
+
+    public ResultSet getAllWeatherData(){
+        try {
+            statement = connection.createStatement();
+            String sql = "SELECT * FROM weather; ";
+            resultSet = statement.executeQuery(sql);
+            return resultSet;
+        }catch(SQLException ex){
+            return null;
+        }
+
+    }
+
+    public ResultSet UserQuery(String sql){
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+            return resultSet;
+        }catch(SQLException ex){
+            System.out.println("Geen geldige invoer!");
+            return null;
+        }
+
+    }
 }// end of class Database
