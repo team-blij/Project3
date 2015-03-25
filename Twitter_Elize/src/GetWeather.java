@@ -17,10 +17,10 @@ import java.util.Date;
 public class GetWeather {
 
     private OpenWeatherMap openWeatherMap = null;
-    private float rain = 0f;
-    private float wind = 0f;
-    private float clouds = 0f;
-    private float snow = 0f;
+    private String rain = "No";
+    private String wind = "No";
+    private String clouds = "No";
+    private String snow = "No";
     private CurrentWeather currentWeather = null;
     private float minTemperature = 0f;
     private float maxTemperature = 0f;
@@ -40,7 +40,7 @@ public class GetWeather {
             database.closeDatabase();
         }
 
-    }
+    }//end of constructor
 
 
     public void getWeatherAt() throws IOException, MalformedURLException, JSONException {
@@ -53,24 +53,23 @@ public class GetWeather {
                 city = currentWeather.getCityName();
                 long time = System.currentTimeMillis();
                 date = new java.sql.Date(time);
-                    if(currentWeather.getRainInstance() != null){
-                        rain = currentWeather.getRainInstance().getRain3h();
+                    if(currentWeather.hasRainInstance()){
+                        rain = "Yes";
                     }
-                    if(currentWeather.getCloudsInstance() != null){
-                        clouds = currentWeather.getCloudsInstance().getPercentageOfClouds();
+                    if(currentWeather.hasCloudsInstance()){
+                        clouds = "Yes";
                     }
-                    if(currentWeather.getSnowInstance() != null){
-                        snow = currentWeather.getSnowInstance().getSnow3h();
+                    if(currentWeather.hasSnowInstance()){
+                        snow = "Yes";
                     }
-                    if(currentWeather.getWindInstance() != null){
-                        wind = currentWeather.getWindInstance().getWindGust();
+                    if(currentWeather.hasWindInstance()){
+                        wind = "Yes";
                     }
                 averageTemperature = Math.round(((minTemperature + maxTemperature) / 2));
 
-                try{
-                database.insertWeatherData(city, minTemperature, maxTemperature, averageTemperature, date, rain, wind, snow, clouds);
-                }catch(SQLException ex){
-                    //TODO
-                }
-    }
-}
+
+                database.insertWeatherData(date, rain, averageTemperature, minTemperature, maxTemperature, snow, clouds, wind);
+
+
+    }//end of getWeatherAt
+}//end of getWeather class

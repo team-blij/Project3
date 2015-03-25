@@ -17,18 +17,8 @@ public class Database {
     private ResultSet resultSet = null;
 
     public Database(){
-
         connectToDatabase();
         useDatabase();
-//        try {
-//            statement = connection.createStatement();
-//            statement.executeUpdate("DROP TABLE tweets");
-//        }catch (SQLException ex){
-//        }
-//        createTable();
-
-
-
     }//end of constructor
 
     private void connectToDatabase(){
@@ -40,8 +30,7 @@ public class Database {
 
            connection = DriverManager.getConnection(
                     //The adres of the server
-                    "jdbc:mysql://145.24.222.198:3306/twitter",
-                    //"jdbc:sqlserver://169.254.119.142:1433",
+                    "jdbc:mysql://145.24.222.198:8001",
                     //username
                     "root",
                     //password
@@ -66,39 +55,8 @@ public class Database {
         }catch (SQLException ex){
         }
 
-    }
+    }//end of useDatabase()
 
-    private void createTable() {
-        try{
-        statement = connection.createStatement();
-            String sql = "CREATE TABLE Tweets"
-                    +   "(  message    LONGTEXT      NOT NULL "
-                    +   ",  user_id    VARCHAR(255)        PRIMARY KEY"
-                    +   ",  username   VARCHAR(255)"
-                    +   ",  location   VARCHAR(255)"
-                    +   ",  create_date DATE "
-                    +   ");"
-                    ;
-           // database.insertWeatherData(city, minTemperature, maxTemperature, averageTemperature, date, rain, wind, snow, clouds);
-//                String sql =        "CREATE TABLE WEATHER"
-//                                +   "( city VARCHAR(255) NOT NULL"
-//                                +   ", min_Temperature FLOAT "
-//                                +   ", max_Temperature FLOAT"
-//                                +   ", average_Temperature FLOAT"
-//                                +   ", date DATE "
-//                                +   ", rain FLOAT"
-//                                +   ", wind_Gust FLOAT"
-//                                +   ", snow FLOAT "
-//                                +   ", cloud_Percentage FLOAT ); "
-//
-//                        ;
-        statement.executeUpdate(sql);
-        }catch(SQLException ex)
-        {
-            System.out.println("Tabel niet gemaakt!");
-            System.out.println(ex);
-        }
-    }//end of createTable()
 
     private void getTable() throws SQLException{
         statement = connection.createStatement();
@@ -107,23 +65,32 @@ public class Database {
         statement.executeUpdate(sql);
     }//end of getTable()
 
-    public void insertTweetIntoTable(String tableName, String message, Long user_id, String username, String location, Date date){
+    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String location, Long twitterUser_idAccount, Long area_idArea, String user_Name, int followers, Long id_User, Long animal_idAnimal){
         try {
             statement = connection.createStatement();
-            String sql = "INSERT INTO "
-                    + tableName
-                    + "(message, user_id, username, location, create_date) "
-                    + "VALUES ("
-                    + message
-                    + ", "
-                    + user_id
-                    + ", "
-                    + username
-                    + ", "
-                    + location
-                    + ", "
-                    + date
-                    + ");";
+                String sql = "INSERT INTO tweet"
+                        + "(id_Tweet, tweet_date, text, location, twitterUser_idAccount, area_idArea, user_Name, followers, id_User, animal_idAnimal) "
+                        + "VALUES (\""
+                        + id_Tweet
+                        + "\", \""
+                        +  tweet_date
+                        + "\", \" "
+                        + text
+                        + "\", \" "
+                        + location
+                        + "\", \" "
+                        + twitterUser_idAccount
+                        + "\", \" "
+                        +  area_idArea
+                        + "\", \" "
+                        +  user_Name
+                        + "\", \" "
+                        +  followers
+                        + "\", \" "
+                        +  id_User
+                        + "\", \" "
+                        +  animal_idAnimal
+                        + "\");";
             statement.executeUpdate(sql);
         }catch(SQLException ex){
 
@@ -133,30 +100,32 @@ public class Database {
 
     }// end of insertIntoTable()
 
-    public void insertWeatherData(String city, float minTemperature, float maxTemperature, float averageTemperature,
-                                  Date date, float rain, float wind, float snow, float clouds) throws SQLException{
-                    statement = connection.createStatement();
-                    String sql =        "INSERT INTO Weather VALUES ("
-                                  +     city
-                                  +     ", "
-                                  +     minTemperature
-                                  +     ", "
-                                  +     maxTemperature
-                                  +     ", "
-                                  +     averageTemperature
-                                  +     ", "
-                                  +     date
-                                  +     ", "
-                                  +     rain
-                                  +     ", "
-                                  +     wind
-                                  +     ", "
-                                  +     snow
-                                  +     ", "
-                                  +     clouds
-                                  +     ");"
-                            ;
-                    statement.execute(sql);
+    public void insertWeatherData(Date date_Today, String rain, float averageTemperature, float minTemperature, float maxTemperature, String snow, String clouds, String wind){
+            try {
+                statement = connection.createStatement();
+                String sql = "INSERT INTO Weather"
+                        + "(date_Today, rain, averageTemperature, minTemperature, maxTemperature, snow, clouds, wind) "
+                        + "VALUES ('"
+                        + date_Today
+                        + "', '"
+                        + rain
+                        + "', '"
+                        + averageTemperature
+                        + "', '"
+                        + minTemperature
+                        + "', '"
+                        + maxTemperature
+                        + "', ' "
+                        + snow
+                        + "' , '"
+                        + clouds
+                        + "', '"
+                        + wind
+                        + "');";
+                statement.execute(sql);
+            }catch(SQLException ex){
+                //TODO
+            }
     }//end of insertWeatherData()
 
     public void closeDatabase(){
@@ -166,7 +135,7 @@ public class Database {
                 System.out.println("Database closed");
             }
         }catch(SQLException ex){
-
+        //TODO
         }
     }// end of closeDatabase()
 

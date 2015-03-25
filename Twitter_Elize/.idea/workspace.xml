@@ -32,51 +32,46 @@
       <file leaf-file-name="GetTwitter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3247">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2928" max-vertical-offset="3536">
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetData.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GetData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2821577" vertical-offset="0" max-vertical-offset="482">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6845361" vertical-offset="1742" max-vertical-offset="3043">
-              <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2516">
+              <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-                <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-                <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-                <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-                <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-                <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+                <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+                <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -85,8 +80,8 @@
       <file leaf-file-name="GetWeather.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GetWeather.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-              <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="1224">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,10 +105,11 @@
         <option value="$PROJECT_DIR$/src/Get.java" />
         <option value="$PROJECT_DIR$/src/Query.java" />
         <option value="$PROJECT_DIR$/src/Queries.java" />
+        <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/GetTwitter.java" />
         <option value="$PROJECT_DIR$/src/GetWeather.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Database.java" />
+        <option value="$PROJECT_DIR$/src/GetData.java" />
       </list>
     </option>
   </component>
@@ -139,7 +135,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -150,7 +146,44 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter_Elize" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter_Elize" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -161,7 +194,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TwitterData/maventwitter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -495,15 +528,17 @@
       <workItem from="1427269486216" duration="4530000" />
       <workItem from="1427274129836" duration="947000" />
       <workItem from="1427276980206" duration="3360000" />
+      <workItem from="1427280695590" duration="3944000" />
+      <workItem from="1427288787501" duration="7524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115458000" />
+    <option name="totallyTimeSpent" value="126926000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -516,10 +551,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19339623" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1981132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -557,7 +592,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19339623" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1981132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -599,14 +634,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="714">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="3026">
@@ -622,36 +649,21 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -679,36 +691,21 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -736,36 +733,21 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -793,36 +775,21 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -850,36 +817,21 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1134,68 +1086,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3026" max-vertical-offset="3536">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GetWeather.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="1224">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3247">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6845361" vertical-offset="1742" max-vertical-offset="3043">
-          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2516">
+          <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427279058363" expanded="true" signature="1993:2006" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2012" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2053" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2148" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2201" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2254" placeholder="CREATE TABLE..Tweetsmessage..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2329" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2346" placeholder="CREATE TABLE..missingValue..." />
-            <marker date="1427279058363" expanded="true" signature="1993:2353" placeholder="CREATE TABLE..Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2545" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2614" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2678" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2743" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2811" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2863" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2917" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:2975" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3028" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="2525:3096" placeholder="CREATE TABLE..WEATHER..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3486" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3466:3488" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3811" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:3954" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4011" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4067" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4068" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4126" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4184" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="3800:4237" placeholder="INSERT INTO ..." />
-            <marker date="1427279058363" expanded="true" signature="4812:5685" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1759" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="1739:1761" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2329" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2367" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2437" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2509" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2513" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2580" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:2651" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3099" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3102" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="2179:3103" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:3760" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4354" placeholder="INSERT INTO ..." />
+            <marker date="1427299185553" expanded="true" signature="3623:4355" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GetData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2821577" vertical-offset="0" max-vertical-offset="482">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
