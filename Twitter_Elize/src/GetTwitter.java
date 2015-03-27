@@ -14,9 +14,8 @@ public class GetTwitter {
     private Twitter twitterInstance = null;
 
 
-
     private String blijdorpQuery = "rotterdamzoo until:" + getDateToday();
-    private Query query = new Query("rotterdamzoo" + "Blijdorp");
+    private Query query = new Query("rotterdamzoo");
 
     //Variables that are needed for gathering data:
 
@@ -33,7 +32,7 @@ public class GetTwitter {
     //The name of the user
     String message = null;
     //The tweet
-    String Location = null;
+    String location = null;
     //the location of the user
     java.util.Date dateUtil = null;
     Date date = null;
@@ -44,6 +43,9 @@ public class GetTwitter {
     //tweet ID
     int followers = 0;
     //The amount of followers the user has
+    String region = null;
+    String country = null;
+
 
 
     public GetTwitter(){
@@ -73,7 +75,14 @@ public class GetTwitter {
                 status = (Status) tweets.get(i);
                 user_Name = status.getUser().getName();
                 message = status.getText();
-                Location = status.getUser().getLocation();
+                location = status.getUser().getLocation();
+                if(status.getGeoLocation() != null){
+                    double latitude = status.getGeoLocation().getLatitude();
+                    double longitude = status.getGeoLocation().getLongitude();
+                    GetLocation getLocation = new GetLocation(latitude, longitude);
+                    region = getLocation.getRegion();
+                    region = getLocation.getCountry();
+                }
 
                 java.util.Date dateUtil = status.getCreatedAt();
                 date = new java.sql.Date(dateUtil.getTime());
@@ -82,8 +91,7 @@ public class GetTwitter {
                 followers = status.getUser().getFollowersCount();
 
 
-                database.insertTweetIntoTable(tweet_ID, date, message, Location, user_ID, getArea(), user_Name, followers, user_ID, null );
-
+                database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
 
             }
             return result;

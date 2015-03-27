@@ -129,21 +129,21 @@ public class geotwittercombo {
 //                    
 //                    System.out.print(coordinates.get(0));
 //                    System.out.print(coordinates.get(1));
-                    JSONObject gmaps = JsonReader.readJsonFromUrl("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=false");
-                    JSONArray results = gmaps.getJSONArray("results");
-                    JSONObject results2 = results.getJSONObject(0);
-                    JSONArray adresscomp = results2.getJSONArray("address_components");
 
-                    int arrayLenght = adresscomp.length();
-                    for (int i = 0; i < arrayLenght - 1; i++) {
-                        JSONObject cityObject = adresscomp.getJSONObject(i);
-                        JSONArray types = cityObject.getJSONArray("types");
-                        String typeString = types.getString(0);
-                        if (typeString.equals("locality")) {
-                            city = cityObject.getString("long_name");
-                            break;
                         }
+                        JSONObject gmaps = JsonReader.readJsonFromUrl("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=false");
+                        JSONArray results = gmaps.getJSONArray("results");
+                        JSONObject results2 = results.getJSONObject(0);
+                        JSONArray adresscomp = results2.getJSONArray("address_components");
 
+                        int arrayLenght = adresscomp.length();
+                        for (int i = 0; i < arrayLenght - 1; i++) {
+                            JSONObject cityObject = adresscomp.getJSONObject(i);
+                            JSONArray types = cityObject.getJSONArray("types");
+                            String typeString = types.getString(0);
+                            if (typeString.equals("locality")) {
+                                city = cityObject.getString("long_name");
+                                break;
                     }
 
                     System.out.println(city);
