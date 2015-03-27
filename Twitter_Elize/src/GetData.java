@@ -19,13 +19,9 @@ public class GetData {
         try {
             database = new Database();
             getQuery();
-
-
         }finally {
             database.closeDatabase();
         }
-
-
     }
 
     private void getQuery(){

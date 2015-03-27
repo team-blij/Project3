@@ -39,6 +39,7 @@ public class GetWeather {
         }finally {
             database.closeDatabase();
         }
+
     }//end of constructor
 
 
@@ -52,6 +53,7 @@ public class GetWeather {
 
                 minTemperature = toCelcius(minTemperature);
                 maxTemperature = toCelcius(maxTemperature);
+
 
                 city = currentWeather.getCityName();
                 long time = System.currentTimeMillis();
@@ -69,6 +71,7 @@ public class GetWeather {
                         wind = "Yes";
                     }
                 averageTemperature = Math.round(((minTemperature + maxTemperature) / 2));
+
 
                 database.insertWeatherData(date, rain, averageTemperature, minTemperature, maxTemperature, snow, clouds, wind);
 

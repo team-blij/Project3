@@ -8,7 +8,6 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.*;
-import java.util.ArrayList;
 
 
 public class Database {
@@ -31,7 +30,7 @@ public class Database {
 
            connection = DriverManager.getConnection(
                     //The adres of the server
-                    "jdbc:mysql://145.24.222.198:8001",
+                    "jdbc:mysql://localhost:8001",
                     //username
                     "root",
                     //password
@@ -70,11 +69,11 @@ public class Database {
         }
     }//end of getTable()
 
-    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String location, Long twitterUser_idAccount, String Area, String user_Name, int followers, Long id_User, String Animal){
+    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String location, Long twitterUser_idAccount, Long area_idArea, String user_Name, int followers, Long id_User, Long animal_idAnimal){
         try {
             statement = connection.createStatement();
                 String sql = "INSERT INTO tweet"
-                        + "(id_Tweet, tweet_date, text, location, twitterUser_idAccount, Area, user_Name, followers, id_User, Animal) "
+                        + "(id_Tweet, tweet_date, text, location, twitterUser_idAccount, area_idArea, user_Name, followers, id_User, animal_idAnimal) "
                         + "VALUES (\""
                         + id_Tweet
                         + "\", \""
@@ -86,7 +85,7 @@ public class Database {
                         + "\", \" "
                         + twitterUser_idAccount
                         + "\", \" "
-                        +  Area
+                        +  area_idArea
                         + "\", \" "
                         +  user_Name
                         + "\", \" "
@@ -94,7 +93,7 @@ public class Database {
                         + "\", \" "
                         +  id_User
                         + "\", \" "
-                        +  Animal
+                        +  animal_idAnimal
                         + "\");";
             statement.executeUpdate(sql);
         }catch(SQLException ex){
@@ -167,43 +166,5 @@ public class Database {
             return null;
         }
 
-    }//get UserQuery();
-
-    public ArrayList getArea(){
-        try {
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery("Select Area From area;");
-            Array resultStringArray = (Array) resultSet.getArray("Area");
-            ArrayList<String> arrayListString = null;
-            int count = 0;
-            while(resultSet.next()){
-                arrayListString.add(resultSet.getString(count));
-                count++;
-            }
-            return arrayListString;
-        }catch(SQLException ex){
-            System.out.println("Geen geldige invoer!");
-            return null;
-        }
-
-    }//end of getAreas();
-
-    public ArrayList getAnimal(){
-        try{
-        statement = connection.createStatement();
-        resultSet = statement.executeQuery("Select Animal From Animal;");
-        Array resultStringArray = (Array) resultSet.getArray("Animal");
-        ArrayList<String> arrayListString = null;
-        int count = 0;
-        while(resultSet.next()){
-            arrayListString.add(resultSet.getString(count));
-            count++;
-        }
-        return arrayListString;
-    }catch(SQLException ex){
-        System.out.println("Geen geldige invoer!");
-        return null;
     }
-    }//end of getAnimal()
-
 }// end of class Database

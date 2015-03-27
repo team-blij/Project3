@@ -35,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GetTwitter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GetTwitter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2928" max-vertical-offset="3536">
-              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.19921875" vertical-offset="1139" max-vertical-offset="2397">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="GetData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GetData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1054">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="986">
+              <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,29 +60,32 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2370" max-vertical-offset="2992">
-              <caret line="162" column="29" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="3655">
+              <caret line="182" column="35" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-                <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-                <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-                <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-                <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
+                <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+                <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+                <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+                <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+                <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+                <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+                <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+                <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
               </folding>
             </state>
           </provider>
@@ -91,18 +94,28 @@
       <file leaf-file-name="GetWeather.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GetWeather.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1224">
-              <caret line="33" column="27" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1343">
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7759336" vertical-offset="0" max-vertical-offset="578">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Twitter.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitter.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -116,11 +129,11 @@
         <option value="$PROJECT_DIR$/src/Get.java" />
         <option value="$PROJECT_DIR$/src/Query.java" />
         <option value="$PROJECT_DIR$/src/Queries.java" />
-        <option value="$PROJECT_DIR$/src/GetTwitter.java" />
-        <option value="$PROJECT_DIR$/src/GetWeather.java" />
         <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/GetData.java" />
+        <option value="$PROJECT_DIR$/src/GetWeather.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/GetTwitter.java" />
       </list>
     </option>
   </component>
@@ -158,7 +171,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,26 +203,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Twitter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Twitter_Elize" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -567,11 +562,15 @@
       <workItem from="1427303767859" duration="6720000" />
       <workItem from="1427310647912" duration="2179000" />
       <workItem from="1427382084458" duration="79000" />
+      <workItem from="1427442193700" duration="4332000" />
+      <workItem from="1427448529639" duration="3198000" />
+      <workItem from="1427453501369" duration="592000" />
+      <workItem from="1427469065749" duration="5066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135904000" />
+    <option name="totallyTimeSpent" value="149092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -588,7 +587,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1981132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1509434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -625,11 +624,11 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1981132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1509434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -671,14 +670,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="578">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="1411">
@@ -686,24 +677,27 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
           </folding>
         </state>
       </provider>
@@ -731,24 +725,27 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
           </folding>
         </state>
       </provider>
@@ -776,24 +773,27 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
           </folding>
         </state>
       </provider>
@@ -821,24 +821,27 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
           </folding>
         </state>
       </provider>
@@ -866,24 +869,27 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
           </folding>
         </state>
       </provider>
@@ -1138,65 +1144,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
+    <entry file="file://$PROJECT_DIR$/Twitter.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3026" max-vertical-offset="3536">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2370" max-vertical-offset="2992">
-          <caret line="162" column="29" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <marker date="1427311578949" expanded="true" signature="1746:1752" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1765" placeholder="SELECT * FRO..tweet..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1767" placeholder="SELECT missi..." />
-            <marker date="1427311578949" expanded="true" signature="1746:1768" placeholder="SELECT FROM Tweets..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2428" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2466" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2536" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2608" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2612" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2679" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:2750" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3198" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3201" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="2278:3202" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:3859" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4453" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="3722:4454" placeholder="INSERT INTO ..." />
-            <marker date="1427311578949" expanded="true" signature="5025:5046" placeholder="SELECT * FRO..weather..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GetData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1054">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="986">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="3655">
+          <caret line="182" column="35" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <marker date="1427469958929" expanded="true" signature="1772:1778" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1791" placeholder="SELECT * FRO..tweet..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1793" placeholder="SELECT missi..." />
+            <marker date="1427469958929" expanded="true" signature="1772:1794" placeholder="SELECT FROM Tweets..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2426" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2464" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2534" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2606" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2610" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2677" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:2748" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3180" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3183" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="2292:3184" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:3841" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4435" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="3704:4436" placeholder="INSERT INTO ..." />
+            <marker date="1427469958929" expanded="true" signature="5007:5028" placeholder="SELECT * FRO..weather..." />
+            <marker date="1427469958929" expanded="true" signature="5685:5706" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6355" placeholder="Select Area ..area..." />
+            <marker date="1427469958929" expanded="true" signature="6336:6361" placeholder="Select Anima..Animal..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GetWeather.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1224">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1343">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7759336" vertical-offset="0" max-vertical-offset="578">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GetTwitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.19921875" vertical-offset="1139" max-vertical-offset="2397">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
           <folding />
         </state>
       </provider>
