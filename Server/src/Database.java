@@ -2,18 +2,13 @@
  * Created by Elize on 17-3-2015.
  */
 
-import net.sourceforge.jtds.jdbc.*;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
 import java.sql.*;
+import java.util.ArrayList;
 
 
 public class Database {
     private Connection connection = null;
     private Statement statement = null;
-    private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
     public Database(){
@@ -69,11 +64,11 @@ public class Database {
         }
     }//end of getTable()
 
-    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String location, Long twitterUser_idAccount, Long area_idArea, String user_Name, int followers, Long id_User, Long animal_idAnimal){
+    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String region, String country, String Area, String user_Name, int followers, Long id_User, String Animal){
         try {
             statement = connection.createStatement();
                 String sql = "INSERT INTO tweet"
-                        + "(id_Tweet, tweet_date, text, location, twitterUser_idAccount, area_idArea, user_Name, followers, id_User, animal_idAnimal) "
+                        + "(id_Tweet, date, text, region, country, Area, user_Name, followers, id_User, Animal) "
                         + "VALUES (\""
                         + id_Tweet
                         + "\", \""
@@ -81,11 +76,11 @@ public class Database {
                         + "\", \" "
                         + text
                         + "\", \" "
-                        + location
+                        + region
                         + "\", \" "
-                        + twitterUser_idAccount
+                        + country
                         + "\", \" "
-                        +  area_idArea
+                        +  Area
                         + "\", \" "
                         +  user_Name
                         + "\", \" "
@@ -93,7 +88,7 @@ public class Database {
                         + "\", \" "
                         +  id_User
                         + "\", \" "
-                        +  animal_idAnimal
+                        +  Animal
                         + "\");";
             statement.executeUpdate(sql);
         }catch(SQLException ex){
@@ -108,7 +103,7 @@ public class Database {
             try {
                 statement = connection.createStatement();
                 String sql = "INSERT INTO Weather"
-                        + "(date_Today, rain, averageTemperature, minTemperature, maxTemperature, snow, clouds, wind) "
+                        + "(date, rain, averageTemperature, lowTemperature, highTemperature, snow, clouds, wind) "
                         + "VALUES ('"
                         + date_Today
                         + "', '"
@@ -128,7 +123,7 @@ public class Database {
                         + "');";
                 statement.execute(sql);
             }catch(SQLException ex){
-                //TODO
+                System.out.println("Niet ingevoerd.");
             }
     }//end of insertWeatherData()
 
@@ -166,5 +161,43 @@ public class Database {
             return null;
         }
 
+    }//get UserQuery();
+
+    public ArrayList getArea(){
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("Select Area From area;");
+            Array resultStringArray = (Array) resultSet.getArray("Area");
+            ArrayList<String> arrayListString = null;
+            int count = 0;
+            while(resultSet.next()){
+                arrayListString.add(resultSet.getString(count));
+                count++;
+            }
+            return arrayListString;
+        }catch(SQLException ex){
+            System.out.println("Geen geldige invoer!");
+            return null;
+        }
+
+    }//end of getAreas();
+
+    public ArrayList getAnimal(){
+        try{
+        statement = connection.createStatement();
+        resultSet = statement.executeQuery("Select Animal From Animal;");
+        Array resultStringArray = (Array) resultSet.getArray("Animal");
+        ArrayList<String> arrayListString = null;
+        int count = 0;
+        while(resultSet.next()){
+            arrayListString.add(resultSet.getString(count));
+            count++;
+        }
+        return arrayListString;
+    }catch(SQLException ex){
+        System.out.println("Geen geldige invoer!");
+        return null;
     }
+    }//end of getAnimal()
+
 }// end of class Database

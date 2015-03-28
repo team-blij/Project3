@@ -3,18 +3,26 @@ import twitter4j.conf.*;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 /**
  * Created by Elize on 10-3-2015.
  */
 public class GetTwitter {
     //The Twitter instances:
-    ConfigurationBuilder cb = new ConfigurationBuilder();
-    public Twitter twitterInstance = null;
-    public Query query = new Query("rotterdamzoo" + "Blijdorp");
+    private ConfigurationBuilder cb = new ConfigurationBuilder();
+    private Twitter twitterInstance = null;
+
+
+    private String blijdorpQuery = "rotterdamzoo until:" + getDateToday();
+    private Query query = new Query("rotterdamzoo");
 
     //Variables that are needed for gathering data:
+
     public User Blijdorp = null;
+    String[] blijdorpAssets = {"rotterdamzoo oceanium" , "rotterdamzoo rivierahal"};
+    String[] animals = {};
+    GetWeather getWeather = null;
     Database database = new Database();
     private int area_idArea = 0;
     private int animal_idAnimal = 0;
@@ -24,7 +32,7 @@ public class GetTwitter {
     //The name of the user
     String message = null;
     //The tweet
-    String geoLocation = null;
+    String location = null;
     //the location of the user
     java.util.Date dateUtil = null;
     Date date = null;
@@ -35,6 +43,9 @@ public class GetTwitter {
     //tweet ID
     int followers = 0;
     //The amount of followers the user has
+    String region = null;
+    String country = null;
+
 
 
     public GetTwitter(){
@@ -58,20 +69,30 @@ public class GetTwitter {
 
     private QueryResult fetchAndDrawTweets(){
         try{
-            QueryResult result = twitterInstance.search(query);
-            ArrayList tweets = (ArrayList) result.getTweets();
-            for (int i = 0; i < result.getCount(); i++){
+                QueryResult result = twitterInstance.search(query);
+                ArrayList tweets = (ArrayList) result.getTweets();
+                for (int i = 0; i < result.getCount(); i++){
                 status = (Status) tweets.get(i);
                 user_Name = status.getUser().getName();
                 message = status.getText();
-                geoLocation = status.getUser().getLocation();
+                location = status.getUser().getLocation();
+                if(status.getGeoLocation() != null){
+                    double latitude = status.getGeoLocation().getLatitude();
+                    double longitude = status.getGeoLocation().getLongitude();
+                    GetLocation getLocation = new GetLocation(latitude, longitude);
+                    region = getLocation.getRegion();
+                    region = getLocation.getCountry();
+                }
+
                 java.util.Date dateUtil = status.getCreatedAt();
                 date = new java.sql.Date(dateUtil.getTime());
                 user_ID = status.getUser().getId();
                 tweet_ID = status.getId();
                 followers = status.getUser().getFollowersCount();
 
-                database.insertTweetIntoTable(tweet_ID, date, message, geoLocation, user_ID, null, user_Name, followers, user_ID, null );
+
+                database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
+
             }
             return result;
         }catch(TwitterException te){
@@ -88,5 +109,41 @@ public class GetTwitter {
         }// end of catch
         return Blijdorp;
     }// end of GetUser()
+
+
+    private String getArea(){
+
+        ArrayList<String> areasInDatabase = database.getArea();
+        String[] areasInTweet = status.getText().trim().split(" ");
+        for(String string: areasInTweet) {
+            for (String s : areasInDatabase) {
+                if (s.equals(string)) {
+                    return string;
+                }
+            }
+        }
+       return null;
+    }//end of getArea()
+
+
+    private String getAnimal(){
+        ArrayList<String> AnimalsInDatabase = database.getAnimal();
+        String[] AnimalInTweet = status.getText().trim().split(" ");
+        for(String string: AnimalInTweet) {
+            for (String s : AnimalsInDatabase) {
+                if (s.equals(string)) {
+                    return string;
+                }
+            }
+        }
+
+        return null;
+    }//endo fo getAnimal()
+
+    private Date getDateToday(){
+        java.util.Date dateTodayUtil = new java.util.Date();
+        Date dateToday = new java.sql.Date(dateTodayUtil.getTime());
+        return dateToday;
+    }// end of getDateToday()
 
 }// end of GetTwitter class
