@@ -104,17 +104,19 @@ public class geotwittercombo {
 
                 String twitterName = userJson.getString("name");
                 
-                try{
-                    System.out.println("Proberen");
-                connectToAndQueryDatabase(json.getLong("id"),twitterName,twitterText);}
-                catch(SQLException | ClassNotFoundException e)
-                {
-                    System.out.println("Gefaald");
-                }
+                
                 //System.out.println(twitterName + ": " + twitterText);
                 String twitterGeo = json.getString("geo");
 
                 if (twitterGeo.equals("null")) {
+                    try{
+                    System.out.println("Proberen");
+                        connectToAndQueryDatabase(json.getLong("id"),twitterName,twitterText);}
+                        catch(SQLException | ClassNotFoundException e)
+                    {
+                    System.out.println("Gefaald");
+                    }
+                    
                     nogeo++;
                 } else {
 
@@ -129,21 +131,29 @@ public class geotwittercombo {
 //                    
 //                    System.out.print(coordinates.get(0));
 //                    System.out.print(coordinates.get(1));
+                    JSONObject gmaps = JsonReader.readJsonFromUrl("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=false");
+                    JSONArray results = gmaps.getJSONArray("results");
+                    JSONObject results2 = results.getJSONObject(0);
+                    JSONArray adresscomp = results2.getJSONArray("address_components");
 
+                    int arrayLenght = adresscomp.length();
+                    for (int i = 0; i < arrayLenght - 1; i++) {
+                        JSONObject cityObject = adresscomp.getJSONObject(i);
+                        JSONArray types = cityObject.getJSONArray("types");
+                        String typeString = types.getString(0);
+                        if (typeString.equals("locality")) {
+                            city = cityObject.getString("long_name");
+                            break;
                         }
-                        JSONObject gmaps = JsonReader.readJsonFromUrl("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=false");
-                        JSONArray results = gmaps.getJSONArray("results");
-                        JSONObject results2 = results.getJSONObject(0);
-                        JSONArray adresscomp = results2.getJSONArray("address_components");
 
-                        int arrayLenght = adresscomp.length();
-                        for (int i = 0; i < arrayLenght - 1; i++) {
-                            JSONObject cityObject = adresscomp.getJSONObject(i);
-                            JSONArray types = cityObject.getJSONArray("types");
-                            String typeString = types.getString(0);
-                            if (typeString.equals("locality")) {
-                                city = cityObject.getString("long_name");
-                                break;
+                    }
+                    
+                    try{
+                    System.out.println("Proberen");
+                        connectToAndQueryDatabase(json.getLong("id"),twitterName,twitterText,city);}
+                        catch(SQLException | ClassNotFoundException e)
+                    {
+                    System.out.println("Gefaald");
                     }
 
                     System.out.println(city);
@@ -169,6 +179,23 @@ public class geotwittercombo {
 
     }
 
+    public static void connectToAndQueryDatabase(long id, String naam, String text, String city) throws SQLException, ClassNotFoundException {
+            
+        
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitterdata", "root", "blijdorp");
+           
+            
+            Statement stmt = con.createStatement();
+            
+            stmt.execute("insert into BlijdorpTweets values("+id+",\""+ naam + "\",\" "+ text + "\",\" " + city+ "\");");
+            
+            
+        
+            
+        
+
+    }
+    
     public static void connectToAndQueryDatabase(long id, String naam, String text) throws SQLException, ClassNotFoundException {
             
         
@@ -177,15 +204,11 @@ public class geotwittercombo {
             
             Statement stmt = con.createStatement();
             
-            stmt.execute("insert into BlijdorpTweets values("+id+",\""+ naam + "\",\" "+ text + "\");");
             
-            //ResultSet rs = stmt.executeQuery("SELECT * FROM BlijdorpTweets");
-            //while (rs.next()) {
-                //int x = rs.getInt("id");
-               // String s = rs.getString("twittername");
-                //String f = rs.getString("twittertext");
-                //System.out.println(x + s + f);
-          // }
+            
+            stmt.execute("insert into BlijdorpTweets values("+id+",\""+ naam + "\",\" "+ text + "\",\" " + "" + "\");");
+            
+            
         
             
         
