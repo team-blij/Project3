@@ -37,33 +37,37 @@ public class GetLocation {
     //@autor Hans
     public String getRegion() {
         try {
-            int arrayLenght = adresscomp.length();
-            for (int i = 0; i < arrayLenght - 1; i++) {
-                JSONObject cityObject = adresscomp.getJSONObject(i);
-                JSONArray types = cityObject.getJSONArray("types");
-                String typeString = types.getString(0);
-                if (typeString.equals("administrative_area_level_1")) {
-                    region = cityObject.getString("long_name");
-                    return region;
+            if (adresscomp != null ) {
+                int arrayLenght = adresscomp.length();
+                for (int i = 0; i < arrayLenght - 1; i++) {
+                    JSONObject cityObject = adresscomp.getJSONObject(i);
+                    JSONArray types = cityObject.getJSONArray("types");
+                    String typeString = types.getString(0);
+                    if (typeString.equals("administrative_area_level_1")) {
+                        region = cityObject.getString("long_name");
+                        return region;
+                    }
                 }
             }
-        }catch(JSONException ex){
+        }catch(JSONException ex) {
 
         }
         return null;
-    }
+    }//end of getRegion
 
     //@author Hans
     public String getCountry() {
         try {
-            int arrayLenght = adresscomp.length();
-            for (int i = 0; i < arrayLenght - 1; i++) {
-                JSONObject cityObject = adresscomp.getJSONObject(i);
-                JSONArray types = cityObject.getJSONArray("types");
-                String typeString = types.getString(0);
-                if (typeString.equals("country")) {
-                    country = cityObject.getString("long_name");
-                    return country;
+            if (adresscomp != null ) {
+                int arrayLenght = adresscomp.length();
+                for (int i = 0; i < arrayLenght - 1; i++) {
+                    JSONObject cityObject = adresscomp.getJSONObject(i);
+                    JSONArray types = cityObject.getJSONArray("types");
+                    String typeString = types.getString(0);
+                    if (typeString.equals("country")) {
+                        country = cityObject.getString("long_name");
+                        return country;
+                    }
                 }
             }
         }catch(JSONException ex){

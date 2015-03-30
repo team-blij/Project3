@@ -91,7 +91,7 @@ public class GetTwitter {
                 followers = status.getUser().getFollowersCount();
 
 
-                database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
+                //database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
 
             }
             return result;
