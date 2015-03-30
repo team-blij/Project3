@@ -138,7 +138,7 @@ public class Database {
             return null;
         }catch(SQLException ex){
             return "The database couldn't be closed...";
-        //TODO
+
         }
     }// end of closeDatabase()
 
@@ -168,7 +168,6 @@ public class Database {
             }
             return arrayListString;
         }catch(SQLException ex){
-
             return null;
         }
 

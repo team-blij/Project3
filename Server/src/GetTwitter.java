@@ -138,7 +138,7 @@ public class GetTwitter {
         }
 
         return null;
-    }//endo fo getAnimal()
+    }//end of getAnimal()
 
     private Date getDateToday(){
         java.util.Date dateTodayUtil = new java.util.Date();
