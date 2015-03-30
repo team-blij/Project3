@@ -79,8 +79,8 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2526503" vertical-offset="1632" max-vertical-offset="3366">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6307421" vertical-offset="1632" max-vertical-offset="3366">
+              <caret line="120" column="32" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
               <folding>
                 <marker date="1427708111912" expanded="true" signature="1497:1516" placeholder="SELECT * FRO..tweet..." />
                 <marker date="1427708111912" expanded="true" signature="1987:2858" placeholder="INSERT INTO ..." />
@@ -297,15 +297,15 @@
       <workItem from="1427444848963" duration="1332000" />
       <workItem from="1427447983390" duration="1139000" />
       <workItem from="1427573772612" duration="96000" />
-      <workItem from="1427707365819" duration="1080000" />
+      <workItem from="1427707365819" duration="1186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3647000" />
+    <option name="totallyTimeSpent" value="3753000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -552,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2526503" vertical-offset="1632" max-vertical-offset="3366">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6307421" vertical-offset="1632" max-vertical-offset="3366">
+          <caret line="120" column="32" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
           <folding>
             <marker date="1427708111912" expanded="true" signature="1497:1516" placeholder="SELECT * FRO..tweet..." />
             <marker date="1427708111912" expanded="true" signature="1987:2858" placeholder="INSERT INTO ..." />
