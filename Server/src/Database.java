@@ -47,7 +47,7 @@ public class Database {
     private void useDatabase(){
         try {
             statement = connection.createStatement();
-            statement.executeUpdate("USE team_blij; ");
+            statement.executeUpdate("USE data_twitter; ");
         }catch (SQLException ex){
         }
 
