@@ -96,7 +96,7 @@ public class GetTwitter {
             }
             return result;
         }catch(TwitterException te){
-            System.out.println("Couldn't connect!");
+
             return null;
         }// end of catch
     }// end of fetchAndDrawTweets()
@@ -105,7 +105,7 @@ public class GetTwitter {
         try {
             Blijdorp = twitterInstance.showUser("rotterdamzoo");
         }catch(TwitterException t){
-        System.out.println("User not found!");
+
         }// end of catch
         return Blijdorp;
     }// end of GetUser()

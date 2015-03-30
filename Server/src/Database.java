@@ -16,7 +16,7 @@ public class Database {
         useDatabase();
     }//end of constructor
 
-    private void connectToDatabase(){
+    private String connectToDatabase(){
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -32,12 +32,13 @@ public class Database {
                     "blijdorp"
                     );
 
-            System.out.println("U heeft verbinding");
+
+            return "U heeft verbinding";
         }catch(SQLException ex){
-            System.out.println("Er kon geen verbinding worden gemaakt.");
-            ex.printStackTrace();
+            return "Er kon geen verbinding worden gemaakt.";
+
         }catch(ClassNotFoundException ex){
-                    System.exit(0);
+            return null;
         }
 
 
@@ -64,7 +65,7 @@ public class Database {
         }
     }//end of getTable()
 
-    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String region, String country, String Area, String user_Name, int followers, Long id_User, String Animal){
+    public String insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String region, String country, String Area, String user_Name, int followers, Long id_User, String Animal){
         try {
             statement = connection.createStatement();
                 String sql = "INSERT INTO tweet"
@@ -91,15 +92,15 @@ public class Database {
                         +  Animal
                         + "\");";
             statement.executeUpdate(sql);
+            return "Ingevoert in database.";
         }catch(SQLException ex){
+            return "Niet ingevoerd. Er is een fout opgetreden.";
 
-            System.out.println("Niet ingevoerd. Er is een fout opgetreden.");
-            System.out.println(ex);
         }
 
     }// end of insertIntoTable()
 
-    public void insertWeatherData(Date date_Today, String rain, float averageTemperature, float minTemperature, float maxTemperature, String snow, String clouds, String wind){
+    public String insertWeatherData(Date date_Today, String rain, float averageTemperature, float minTemperature, float maxTemperature, String snow, String clouds, String wind){
             try {
                 statement = connection.createStatement();
                 String sql = "INSERT INTO Weather"
@@ -122,18 +123,21 @@ public class Database {
                         + wind
                         + "');";
                 statement.execute(sql);
+                return null;
             }catch(SQLException ex){
-                System.out.println("Niet ingevoerd.");
+                return "Niet ingevoerd.";
             }
     }//end of insertWeatherData()
 
-    public void closeDatabase(){
+    public String closeDatabase(){
         try {
             if(!connection.isClosed()){
                 connection.close();
-                System.out.println("Database closed");
+                return "Database closed.";
             }
+            return null;
         }catch(SQLException ex){
+            return "The database couldn't be closed...";
         //TODO
         }
     }// end of closeDatabase()
@@ -151,18 +155,6 @@ public class Database {
 
     }
 
-    public ResultSet UserQuery(String sql){
-        try {
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
-            return resultSet;
-        }catch(SQLException ex){
-            System.out.println("Geen geldige invoer!");
-            return null;
-        }
-
-    }//get UserQuery();
-
     public ArrayList getArea(){
         try {
             statement = connection.createStatement();
@@ -176,7 +168,7 @@ public class Database {
             }
             return arrayListString;
         }catch(SQLException ex){
-            System.out.println("Geen geldige invoer!");
+
             return null;
         }
 
@@ -195,7 +187,7 @@ public class Database {
         }
         return arrayListString;
     }catch(SQLException ex){
-        System.out.println("Geen geldige invoer!");
+
         return null;
     }
     }//end of getAnimal()
