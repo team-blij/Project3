@@ -16,10 +16,10 @@ public class Main {
 
         //Twitter call
 
-       GetTwitter getTwitter = new GetTwitter();
+        //GetTwitter getTwitter = new GetTwitter();
 
         // Weather call
-        //GetWeather getWeather = new GetWeather();
+        GetWeather getWeather = new GetWeather();
 
 
         //Database call

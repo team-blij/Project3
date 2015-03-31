@@ -16,7 +16,7 @@ public class Database {
         useDatabase();
     }//end of constructor
 
-    private String connectToDatabase(){
+    private void connectToDatabase(){
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -25,20 +25,19 @@ public class Database {
 
            connection = DriverManager.getConnection(
                     //The adres of the server
-                    "jdbc:mysql://localhost:8001",
+                    "jdbc:mysql://145.24.222.198:8001",
                     //username
                     "root",
                     //password
                     "blijdorp"
                     );
 
-
-            return "U heeft verbinding";
+            System.out.println("U heeft verbinding");
         }catch(SQLException ex){
-            return "Er kon geen verbinding worden gemaakt.";
-
+            System.out.println("Er kon geen verbinding worden gemaakt.");
+            ex.printStackTrace();
         }catch(ClassNotFoundException ex){
-            return null;
+                    System.exit(0);
         }
 
 
@@ -47,7 +46,7 @@ public class Database {
     private void useDatabase(){
         try {
             statement = connection.createStatement();
-            statement.executeUpdate("USE data_twitter; ");
+            statement.executeUpdate("USE team_blij; ");
         }catch (SQLException ex){
         }
 
@@ -65,11 +64,11 @@ public class Database {
         }
     }//end of getTable()
 
-    public String insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String region, String country, String Area, String user_Name, int followers, Long id_User, String Animal){
+    public void insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String region, String country, String Area, String user_Name, int followers, Long id_User, String Animal){
         try {
             statement = connection.createStatement();
                 String sql = "INSERT INTO tweet"
-                        + "(id_Tweet, date, text, region, country, Area, user_Name, followers, id_User, Animal) "
+                        + "(Tweet_ID, date, text, region, country, Area, User_Name, followers, id_User, Animal) "
                         + "VALUES (\""
                         + id_Tweet
                         + "\", \""
@@ -92,15 +91,15 @@ public class Database {
                         +  Animal
                         + "\");";
             statement.executeUpdate(sql);
-            return "Ingevoert in database.";
         }catch(SQLException ex){
-            return "Niet ingevoerd. Er is een fout opgetreden.";
 
+            System.out.println("Niet ingevoerd. Er is een fout opgetreden.");
+            System.out.println(ex);
         }
 
     }// end of insertIntoTable()
 
-    public String insertWeatherData(Date date_Today, String rain, float averageTemperature, float minTemperature, float maxTemperature, String snow, String clouds, String wind){
+    public void insertWeatherData(Date date_Today, String rain, float averageTemperature, float minTemperature, float maxTemperature, String snow, String clouds, String wind){
             try {
                 statement = connection.createStatement();
                 String sql = "INSERT INTO Weather"
@@ -123,22 +122,19 @@ public class Database {
                         + wind
                         + "');";
                 statement.execute(sql);
-                return null;
             }catch(SQLException ex){
-                return "Niet ingevoerd.";
+                System.out.println("Niet ingevoerd.");
             }
     }//end of insertWeatherData()
 
-    public String closeDatabase(){
+    public void closeDatabase(){
         try {
             if(!connection.isClosed()){
                 connection.close();
-                return "Database closed.";
+                System.out.println("Database closed");
             }
-            return null;
         }catch(SQLException ex){
-            return "The database couldn't be closed...";
-
+        //TODO
         }
     }// end of closeDatabase()
 
@@ -155,38 +151,51 @@ public class Database {
 
     }
 
-    public ArrayList getArea(){
+    public ResultSet UserQuery(String sql){
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("Select Area From area;");
-            Array resultStringArray = (Array) resultSet.getArray("Area");
-            ArrayList<String> arrayListString = null;
-            int count = 0;
-            while(resultSet.next()){
-                arrayListString.add(resultSet.getString(count));
-                count++;
-            }
-            return arrayListString;
+            resultSet = statement.executeQuery(sql);
+            return resultSet;
         }catch(SQLException ex){
+            System.out.println("Geen geldige invoer!");
             return null;
         }
 
-    }//end of getAreas();
+    }//get UserQuery();
+
+    public ArrayList getArea(){
+            ArrayList<String> arrayListString = new ArrayList<String>();
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("Select name From area;");
+            int columns = resultSet.getMetaData().getColumnCount();
+            while(resultSet.next()){
+                for(int i = 1; i <= columns; i++) {
+                    arrayListString.add(resultSet.getString(i));
+                }
+            }
+            return arrayListString;
+        }catch(SQLException ex){
+            System.out.println("Geen geldige invoer!" );
+            return null;
+        }
+
+    }//end of getArea();
 
     public ArrayList getAnimal(){
         try{
         statement = connection.createStatement();
         resultSet = statement.executeQuery("Select Animal From Animal;");
-        Array resultStringArray = (Array) resultSet.getArray("Animal");
-        ArrayList<String> arrayListString = null;
-        int count = 0;
-        while(resultSet.next()){
-            arrayListString.add(resultSet.getString(count));
-            count++;
-        }
+        ArrayList<String> arrayListString = new ArrayList<String>();
+            int columns = resultSet.getMetaData().getColumnCount();
+            while(resultSet.next()){
+                for(int i = 1; i <= columns; i++) {
+                    arrayListString.add(resultSet.getString(i));
+                }
+            }
         return arrayListString;
     }catch(SQLException ex){
-
+        System.out.println("Geen geldige invoer!");
         return null;
     }
     }//end of getAnimal()

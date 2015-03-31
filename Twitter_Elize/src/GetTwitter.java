@@ -20,8 +20,6 @@ public class GetTwitter {
     //Variables that are needed for gathering data:
 
     public User Blijdorp = null;
-    String[] blijdorpAssets = {"rotterdamzoo oceanium" , "rotterdamzoo rivierahal"};
-    String[] animals = {};
     GetWeather getWeather = null;
     Database database = new Database();
     private int area_idArea = 0;
@@ -91,7 +89,7 @@ public class GetTwitter {
                 followers = status.getUser().getFollowersCount();
 
 
-                //database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
+                database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
 
             }
             return result;
@@ -122,7 +120,7 @@ public class GetTwitter {
                 }
             }
         }
-       return null;
+       return "No area";
     }//end of getArea()
 
 
@@ -137,8 +135,8 @@ public class GetTwitter {
             }
         }
 
-        return null;
-    }//endo fo getAnimal()
+        return "No animal";
+    }//end of getAnimal()
 
     private Date getDateToday(){
         java.util.Date dateTodayUtil = new java.util.Date();

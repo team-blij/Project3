@@ -46,7 +46,7 @@ public class Database {
     private void useDatabase(){
         try {
             statement = connection.createStatement();
-            statement.executeUpdate("USE data_twitter; ");
+            statement.executeUpdate("USE team_blij; ");
         }catch (SQLException ex){
         }
 
@@ -68,7 +68,7 @@ public class Database {
         try {
             statement = connection.createStatement();
                 String sql = "INSERT INTO tweet"
-                        + "(id_Tweet, date, text, region, country, Area, user_Name, followers, id_User, Animal) "
+                        + "(Tweet_ID, date, text, region, country, Area, User_Name, followers, id_User, Animal) "
                         + "VALUES (\""
                         + id_Tweet
                         + "\", \""
@@ -164,35 +164,35 @@ public class Database {
     }//get UserQuery();
 
     public ArrayList getArea(){
+            ArrayList<String> arrayListString = new ArrayList<String>();
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("Select Area From area;");
-            Array resultStringArray = (Array) resultSet.getArray("Area");
-            ArrayList<String> arrayListString = null;
-            int count = 0;
+            resultSet = statement.executeQuery("Select name From area;");
+            int columns = resultSet.getMetaData().getColumnCount();
             while(resultSet.next()){
-                arrayListString.add(resultSet.getString(count));
-                count++;
+                for(int i = 1; i <= columns; i++) {
+                    arrayListString.add(resultSet.getString(i));
+                }
             }
             return arrayListString;
         }catch(SQLException ex){
-            System.out.println("Geen geldige invoer!");
+            System.out.println("Geen geldige invoer!" );
             return null;
         }
 
-    }//end of getAreas();
+    }//end of getArea();
 
     public ArrayList getAnimal(){
         try{
         statement = connection.createStatement();
         resultSet = statement.executeQuery("Select Animal From Animal;");
-        Array resultStringArray = (Array) resultSet.getArray("Animal");
-        ArrayList<String> arrayListString = null;
-        int count = 0;
-        while(resultSet.next()){
-            arrayListString.add(resultSet.getString(count));
-            count++;
-        }
+        ArrayList<String> arrayListString = new ArrayList<String>();
+            int columns = resultSet.getMetaData().getColumnCount();
+            while(resultSet.next()){
+                for(int i = 1; i <= columns; i++) {
+                    arrayListString.add(resultSet.getString(i));
+                }
+            }
         return arrayListString;
     }catch(SQLException ex){
         System.out.println("Geen geldige invoer!");
