@@ -54,8 +54,7 @@ public class GetWeather {
                 maxTemperature = toCelcius(maxTemperature);
 
                 city = currentWeather.getCityName();
-                long time = System.currentTimeMillis();
-                date = new java.sql.Date(time);
+                date = getDateToday();
                     if(currentWeather.hasRainInstance()){
                         rain = "Yes";
                     }
@@ -79,4 +78,10 @@ public class GetWeather {
         float temperature = ((temp - 32) * 5)/ 9;
         return temperature;
     }
+
+    private java.sql.Date getDateToday(){
+        java.util.Date dateTodayUtil = new java.util.Date();
+        java.sql.Date dateToday = new java.sql.Date(dateTodayUtil.getTime());
+        return dateToday;
+    }// end of getDateToday()
 }//end of getWeather class
