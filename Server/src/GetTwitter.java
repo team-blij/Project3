@@ -63,7 +63,7 @@ public class GetTwitter {
             cb.setOAuthAccessTokenSecret("dTlH0Qa1kPbwXHCa5xkkRhkIyLeD2JvP2bqd1UhNeioID");
             //All keys are private! >:(
             twitterInstance = new TwitterFactory(cb.build()).getInstance();
-            fetchAndDrawTweets();
+            //fetchAndDrawTweets();
 
     }// end of setup()
 
@@ -91,7 +91,7 @@ public class GetTwitter {
                 followers = status.getUser().getFollowersCount();
 
 
-                database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
+                database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(message), user_Name, followers, user_ID, getAnimal(message));
 
             }
             return result;
@@ -111,33 +111,27 @@ public class GetTwitter {
     }// end of GetUser()
 
 
-    private String getArea(){
+    private String getArea(String text){
 
         ArrayList<String> areasInDatabase = database.getArea();
-        String[] areasInTweet = status.getText().trim().split(" ");
-        for(String string: areasInTweet) {
             for (String s : areasInDatabase) {
-                if (s.equals(string)) {
-                    return string;
+                if (text.contains(s.toLowerCase()) || text.contains(s)){
+                    return s;
                 }
             }
-        }
-       return null;
+       return "no area";
     }//end of getArea()
 
 
-    private String getAnimal(){
+    private String getAnimal(String text){
         ArrayList<String> AnimalsInDatabase = database.getAnimal();
-        String[] AnimalInTweet = status.getText().trim().split(" ");
-        for(String string: AnimalInTweet) {
             for (String s : AnimalsInDatabase) {
-                if (s.equals(string)) {
-                    return string;
+                if (text.contains(s.toLowerCase()) || text.contains(s)){
+                    return s;
                 }
             }
-        }
 
-        return null;
+        return "no animal";
     }//end of getAnimal()
 
     private Date getDateToday(){
