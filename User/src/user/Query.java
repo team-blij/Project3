@@ -49,7 +49,7 @@ public class Query {
     public void getRegion(){
         query =     "SELECT COUNT(*), REGION"
                 +   "FROM TWEET"
-                +   "GROUP BY COUNTRY;"
+                +   "GROUP BY REGION;"
                 ;
     }
     
@@ -58,7 +58,7 @@ public class Query {
         query =     "SELECT COUNT(*)"
                 +   "FROM TWEET, WEATHER"
                 +   "WHERE WEATHER.RAIN =  'true'"
-                +   "GROUP BY TWEET_ID;"
+                +   "AND TWEET.DATE = WEATHER.DATE;"
                 ;
     }
     
@@ -66,27 +66,66 @@ public class Query {
         query =     "SELECT COUNT(*)"
                 +   "FROM TWEET, WEATHER"
                 +   "WHERE WEATHER.RAIN = 'false' "
-                +   "AND WEATHER.SNOW = 'false';   "
+                +   "AND WEATHER.SNOW = 'false'; "
+                +   "AND TWEET.DATE = WEATHER.DATE"
+
                 ;    
     }
     
     public void getLowTemperatureAndTweets(){
-        
+         query =    "SELECT COUNT(*)"
+                 +  "FROM TWEET, WEATHER"
+                 +  "WHERE AVERAGETEMPERATURE <= 10"
+                 +  "AND TWEET.DATE = WEATHER.DATE;"
+                 ;
     }
     
     public void getHighTemperatureAndTweets(){
-    
+         query =    "SELECT COUNT(*)"
+                 +  "FROM TWEET, WEATHER"
+                 +  "WHERE AVERAGETEMPERATURE >= 10"
+                 +  "AND TWEET.DATE = WEATHER.DATE;"
+                 ;       
     }
     
     public void getBlijdorpTweetsAndDate(){
-    
+                 query =    "SELECT COUNT(*), DATE"
+                         +  "FROM TWEET"
+                         +  "WHERE User_name = ' Diergaarde Blijdorp'"
+                         +  "GROUP BY DATE"
+                         ;                                       
     }
     
     public void getBlijdorpTweets(){
-    
+                 query =    "SELECT "
+                         + "("
+                            + "SELECT count(*) "
+                            + "FROM Tweet "
+                            + "WHERE AREA != ' no area' "
+                            + "AND ANIMAL = ' no animal' "
+                            + "AND User_name = ' Diergaarde Blijdorp') AS Tweets_About_Areas,"
+                         + "("
+                            + "SELECT count(*) "
+                            + "FROM Tweet "
+                            + "WHERE  ANIMAL != ' no animal' "
+                            + "AND User_name = ' Diergaarde Blijdorp') "
+                            + "AS Tweets_About_Animals,"
+                         + "("
+                            + "SELECT count(*) "
+                             + "FROM Tweet "
+                             + "WHERE  ANIMAL = ' no animal' "
+                             + "AND  AREA = ' no area' "
+                             + "AND User_name = ' Diergaarde Blijdorp') "
+                             + "AS 'Other_Tweets'"
+                         + ";"
+                         ;    
     }
     
     public void getFollowersBlijdorp(){
-    
+                 query =    "SELECT FOLLOWERS, DATE"
+                         +  "FROM TWEET"
+                         +  "WHERE User_name = ' Diergaarde Blijdorp'"
+                         +  "GROUP BY DATE;"
+                         ;      
     }
 }//end of Query
