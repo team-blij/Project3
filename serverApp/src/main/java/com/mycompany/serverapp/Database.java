@@ -149,35 +149,18 @@ public class Database {
         String sql = "SELECT * FROM weather; ";
         resultSet = statement.executeQuery(sql);
         return resultSet;
-
     }
 
     ArrayList<String> arrayListString = new ArrayList();
     
     public ArrayList getArea(){
         try {
-            //System.out.println("Starting try block!");
             statement = connection.createStatement();
-            //System.out.println("Starting statement");
             resultSet = statement.executeQuery("Select Name From area;");
-            //System.out.println("exceuted query!");
-            
-            
-            
-            //System.out.println("Starting while loop!");
-            
-            
             while(resultSet.next()){
-                
-                
-                    //System.out.println("Start while loop: " + count);
-                    //System.out.println(resultSet.getString(1));
-                    arrayListString.add(resultSet.getString(1));
-                    //System.out.println("End while loop: " + count);
-                    
-                }
-               
-                
+                arrayListString.add(resultSet.getString(1));
+             }
+   
             return arrayListString;
         }catch(SQLException ex){
             //System.out.println("Failed to connect and give back data.");
@@ -189,27 +172,10 @@ public class Database {
     ArrayList<String> arrayListStringArea = new ArrayList();
     public ArrayList getAnimal(){
         try{
-        //System.out.println("Starting try block!");    
-        statement = connection.createStatement();
-       // System.out.println("Starting statement");
-        //resultSet = statement.executeQuery("Select Animal From Animal;");
-        //System.out.println("exceuted query!");
-        
-        
-        //Array resultStringArray = (Array) resultSet.getArray("Animal");
-        
-        
-        
-        while(resultSet.next()){
-            
-            
-            //System.out.println("Start while loop: " + count);
-            
-            //System.out.println(resultSet.getString(1));
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("Select Animal From Animal;");
+            while(resultSet.next()){
             arrayListStringArea.add(resultSet.getString(1));
-            //System.out.println("End while loop: " + count);
-            
-            
         }
         return arrayListStringArea;
     }catch(SQLException ex){
@@ -217,5 +183,25 @@ public class Database {
         return arrayListStringArea;
     }
     }//end of getAnimal()
+    
+    ArrayList<String> arrayListString3 = new ArrayList();
+    public ArrayList getAreaByAnimal(String animal){
+        
+        ResultSet resultset = null;
+        try{
+        statement = connection.createStatement();
+        String sql = "SELECT Area FROM Animal where Animal = '"
+                + animal
+                + "'; ";
+        resultSet = statement.executeQuery(sql);
+        while(resultSet.next()){
+        arrayListString3.add(resultSet.getString(1));
+        }
+        return arrayListString3; 
+        }catch(SQLException ex){
+          return arrayListString3;      
+        }
+    
+    }//end of getAreaByAnimal
 
 }// end of class Database

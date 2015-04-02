@@ -20,10 +20,10 @@ import net.aksingh.owmjapis.OpenWeatherMap;
 public final class GetWeather {
 
     private OpenWeatherMap openWeatherMap = null;
-    private String rain = "No";
-    private String wind = "No";
-    private String clouds = "No";
-    private String snow = "No";
+    private String rain = "false";
+    private String wind = "false";
+    private String clouds = "false";
+    private String snow = "false";
     private CurrentWeather currentWeather = null;
     private float minTemperature = 0f;
     private float maxTemperature = 0f;
@@ -34,7 +34,7 @@ public final class GetWeather {
 
     public GetWeather() {
         try {
-            //System.out.println("Weer updaten");
+        
             getWeatherAt();
             
         }catch(IOException | JSONException ex  ){
@@ -42,7 +42,9 @@ public final class GetWeather {
         } catch (SQLException ex) {
             Logger.getLogger(GetWeather.class.getName()).log(Level.SEVERE, null, ex);
         }finally {
-            //database.closeDatabase();
+            try{
+            database.closeDatabase();
+            }catch(SQLException ex){}
         }
     }//end of constructor
 
@@ -61,25 +63,25 @@ public final class GetWeather {
                 city = currentWeather.getCityName();
                 date = getDateToday();
                     if(currentWeather.hasRainInstance()){
-                        rain = "Yes";
+                        rain = "true";
                     }
                     if(currentWeather.hasCloudsInstance()){
-                        clouds = "Yes";
+                        clouds = "true";
                     }
                     if(currentWeather.hasRainInstance() && maxTemperature <= 0){
-                        snow = "Yes";
+                        snow = "true";
                     }
                     if(currentWeather.hasWindInstance()){
-                        wind = "Yes";
+                        wind = "true";
                     } 
                 averageTemperature = Math.round(((minTemperature + maxTemperature) / 2));
                 database = new Database();
                 try{
                 database.insertWeatherData(date, rain, averageTemperature, minTemperature, maxTemperature, snow, clouds, wind);
                 }
-                catch(Exception e)
+                catch(Exception ex)
                 {
-                    //System.out.println("Weer van vandaag staat al in de database");
+                    //TODO
                 }
                 database = null;
 

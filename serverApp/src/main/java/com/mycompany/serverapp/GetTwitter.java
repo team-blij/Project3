@@ -22,13 +22,10 @@ public class GetTwitter {
 
     //Variables that are needed for gathering data:
     public User Blijdorp = null;
-    String[] blijdorpAssets = {"rotterdamzoo oceanium", "rotterdamzoo rivierahal"};
-    String[] animals = {};
     Database database = new Database();
     private int area_idArea = 0;
     private int animal_idAnimal = 0;
     Status status = null;
-    //Information about date, id, source, if it is favorited, enz.
 
     public GetTwitter() throws SQLException {
 
@@ -92,13 +89,18 @@ public class GetTwitter {
                 user_ID = status.getUser().getId();
                 tweet_ID = status.getId();
                 followers = status.getUser().getFollowersCount();
+                String Animal = getAnimal(message);
+                String Area = getArea(message);
+                        if(!Animal.equals("no animal") && Area.equals("no area")){
+                        Area = getAreaByAnimal(Animal);
+                        }
 
                 try {
-                    database.insertTweetIntoTable(tweet_ID, date, message, region, country, getArea(), user_Name, followers, user_ID, getAnimal());
+                    database.insertTweetIntoTable(tweet_ID, date, message, region, country, Area, user_Name, followers, user_ID, Animal);
 
                     ServerMain.s.tweetUpdateCount++;
                 } catch (Exception e) {
-                    //System.out.println("tweet is al in database");
+                    
                 }
             }
             return result;
@@ -117,38 +119,41 @@ public class GetTwitter {
         return Blijdorp;
     }// end of GetUser()
 
-    private String getArea() {
+    private String getArea(String text){
 
         ArrayList<String> areasInDatabase = database.getArea();
-        String[] areasInTweet = status.getText().trim().split(" ");
-        for (String string : areasInTweet) {
             for (String s : areasInDatabase) {
-                if (s.contains(string)) {
+                if (text.contains(s.toLowerCase()) || text.contains(s)){
                     return s;
                 }
             }
-        }
-        return null;
+       return "no area";
     }//end of getArea()
 
-    private String getAnimal() {
+
+    private String getAnimal(String text){
         ArrayList<String> AnimalsInDatabase = database.getAnimal();
-        String[] AnimalInTweet = status.getText().trim().split(" ");
-        for (String string : AnimalInTweet) {
             for (String s : AnimalsInDatabase) {
-                if (s.contains(string)) {
+                if (text.contains(s.toLowerCase()) || text.contains(s)){
                     return s;
                 }
             }
-        }
-
-        return null;
+        return "no animal";
     }//end of getAnimal()
 
-    private Date getDateToday() {
+    private Date getDateToday(){
         java.util.Date dateTodayUtil = new java.util.Date();
         Date dateToday = new java.sql.Date(dateTodayUtil.getTime());
         return dateToday;
     }// end of getDateToday()
+    
+    private String getAreaByAnimal(String animal){
+        
+        ArrayList<String> AreasInDatabase = database.getAreaByAnimal(animal);
+            for (String s : AreasInDatabase) {
+                return s;
+            }
+        return "no Area";
+    }//end of getAreaByAnimal()
 
 }// end of GetTwitter class
