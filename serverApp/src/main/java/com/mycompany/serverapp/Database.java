@@ -6,7 +6,7 @@ package com.mycompany.serverapp;
 
 //import java.sql
 
-import java.sql.Array;
+
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -35,18 +35,18 @@ public class Database {
            connection = (Connection) DriverManager.getConnection(
                     //The adres of the server
                    
-                    "jdbc:mysql://localhost:3306/twitterdata",
+                    "jdbc:mysql://145.24.222.198:8001/team_blij",
                     //username
                     "root",
                     //password
                     "blijdorp"
                     );
 
-           
+           //System.out.println("Connected to database!");
             return "U heeft verbinding";
             
         }catch(SQLException ex){
-            
+            System.out.println("Error connecting to database!");
             return "Er kon geen verbinding worden gemaakt.";
 
         }
@@ -58,7 +58,7 @@ public class Database {
         
         
         statement = connection.createStatement();
-        statement.executeUpdate("USE twitterdata; ");
+        //statement.executeUpdate("USE twitterdata; ");
 
     }//end of useDatabase()
 
@@ -163,7 +163,7 @@ public class Database {
             //System.out.println("exceuted query!");
             
             
-            int count = 1;
+            
             //System.out.println("Starting while loop!");
             
             
@@ -174,7 +174,7 @@ public class Database {
                     //System.out.println(resultSet.getString(1));
                     arrayListString.add(resultSet.getString(1));
                     //System.out.println("End while loop: " + count);
-                    count++;
+                    
                 }
                
                 
@@ -199,7 +199,7 @@ public class Database {
         //Array resultStringArray = (Array) resultSet.getArray("Animal");
         
         
-        int count = 1;
+        
         while(resultSet.next()){
             
             
@@ -208,13 +208,13 @@ public class Database {
             //System.out.println(resultSet.getString(1));
             arrayListStringArea.add(resultSet.getString(1));
             //System.out.println("End while loop: " + count);
-            count++;
+            
             
         }
-        return arrayListString;
+        return arrayListStringArea;
     }catch(SQLException ex){
         //System.out.println("Failed to connect and give back data.");
-        return arrayListString;
+        return arrayListStringArea;
     }
     }//end of getAnimal()
 

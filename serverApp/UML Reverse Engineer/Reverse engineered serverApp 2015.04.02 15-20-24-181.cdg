@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered serverApp 2015.04.02 15-20-24-181">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="com.mycompany.serverapp" name="Database" visibility="public">
+      <Constructors>
+        <Constructor name="Database" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="connection" visibility="private" type="Connection"/>
+        <Field name="statement" visibility="private" type="Statement"/>
+        <Field name="resultSet" visibility="private" type="ResultSet"/>
+        <Field name="arrayListString" visibility="package" type="ArrayList&lt;String&gt;"/>
+        <Field name="arrayListStringArea" visibility="package" type="ArrayList&lt;String&gt;"/>
+      </Fields>
+      <Methods>
+        <Method name="connectToDatabase" visibility="private" returnType="String"/>
+        <Method name="useDatabase" visibility="private" returnType="void"/>
+        <Method name="getAllTweets" visibility="public" returnType="ResultSet"/>
+        <Method name="insertTweetIntoTable" visibility="public" returnType="String">
+          <Argument type="Long" name="id_Tweet"/>
+          <Argument type="Date" name="tweet_date"/>
+          <Argument type="String" name="text"/>
+          <Argument type="String" name="region"/>
+          <Argument type="String" name="country"/>
+          <Argument type="String" name="Area"/>
+          <Argument type="String" name="user_Name"/>
+          <Argument type="int" name="followers"/>
+          <Argument type="Long" name="id_User"/>
+          <Argument type="String" name="Animal"/>
+        </Method>
+        <Method name="insertWeatherData" visibility="public" returnType="String">
+          <Argument type="Date" name="date_Today"/>
+          <Argument type="String" name="rain"/>
+          <Argument type="float" name="averageTemperature"/>
+          <Argument type="float" name="minTemperature"/>
+          <Argument type="float" name="maxTemperature"/>
+          <Argument type="String" name="snow"/>
+          <Argument type="String" name="clouds"/>
+          <Argument type="String" name="wind"/>
+        </Method>
+        <Method name="closeDatabase" visibility="public" returnType="String"/>
+        <Method name="getAllWeatherData" visibility="public" returnType="ResultSet"/>
+        <Method name="getArea" visibility="public" returnType="ArrayList"/>
+        <Method name="getAnimal" visibility="public" returnType="ArrayList"/>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="com.mycompany.serverapp" name="GetLocation" visibility="public">
+      <Constructors>
+        <Constructor name="GetLocation" visibility="public">
+          <Argument type="double" name="lat"/>
+          <Argument type="double" name="lng"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="gmaps" visibility="private" type="JSONObject"/>
+        <Field name="results" visibility="private" type="JSONArray"/>
+        <Field name="results2" visibility="private" type="JSONObject"/>
+        <Field name="adresscomp" visibility="private" type="JSONArray"/>
+        <Field name="region" visibility="private" type="String"/>
+        <Field name="country" visibility="private" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="getRegion" visibility="public" returnType="String"/>
+        <Method name="getCountry" visibility="public" returnType="String"/>
+        <Method name="readJsonFromUrl" visibility="private" returnType="JSONObject" isStatic="true">
+          <Argument type="String" name="url"/>
+        </Method>
+        <Method name="readAll" visibility="private" returnType="String" isStatic="true">
+          <Argument type="Reader" name="rd"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="com.mycompany.serverapp" name="GetTwitter" visibility="public">
+      <Constructors>
+        <Constructor name="GetTwitter" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="cb" visibility="private" type="ConfigurationBuilder"/>
+        <Field name="twitterInstance" visibility="private" type="Twitter"/>
+        <Field name="blijdorpQuery" visibility="private" type="String"/>
+        <Field name="query" visibility="private" type="Query"/>
+        <Field name="Blijdorp" visibility="public" type="User"/>
+        <Field name="blijdorpAssets" visibility="package" type="String[]"/>
+        <Field name="animals" visibility="package" type="String[]"/>
+        <Field name="getWeather" visibility="package" type="GetWeather"/>
+        <Field name="database" visibility="package" type="Database"/>
+        <Field name="area_idArea" visibility="private" type="int"/>
+        <Field name="animal_idAnimal" visibility="private" type="int"/>
+        <Field name="status" visibility="package" type="Status"/>
+      </Fields>
+      <Methods>
+        <Method name="setup" visibility="private" returnType="void"/>
+        <Method name="fetchAndDrawTweets" visibility="private" returnType="QueryResult"/>
+        <Method name="GetUser" visibility="public" returnType="User"/>
+        <Method name="getArea" visibility="private" returnType="String"/>
+        <Method name="getAnimal" visibility="private" returnType="String"/>
+        <Method name="getDateToday" visibility="private" returnType="Date"/>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="com.mycompany.serverapp" name="GetWeather" visibility="public">
+      <Constructors>
+        <Constructor name="GetWeather" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="openWeatherMap" visibility="private" type="OpenWeatherMap"/>
+        <Field name="rain" visibility="private" type="String"/>
+        <Field name="wind" visibility="private" type="String"/>
+        <Field name="clouds" visibility="private" type="String"/>
+        <Field name="snow" visibility="private" type="String"/>
+        <Field name="currentWeather" visibility="private" type="CurrentWeather"/>
+        <Field name="minTemperature" visibility="private" type="float"/>
+        <Field name="maxTemperature" visibility="private" type="float"/>
+        <Field name="city" visibility="private" type="String"/>
+        <Field name="averageTemperature" visibility="private" type="float"/>
+        <Field name="date" visibility="private" type="java.sql.Date"/>
+        <Field name="database" visibility="private" type="Database"/>
+      </Fields>
+      <Methods>
+        <Method name="getWeatherAt" visibility="public" returnType="void"/>
+        <Method name="toCelcius" visibility="private" returnType="float">
+          <Argument type="Float" name="temp"/>
+        </Method>
+        <Method name="getDateToday" visibility="private" returnType="java.sql.Date"/>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="420.0" package="com.mycompany.serverapp" name="ServerGUI" visibility="public">
+      <Constructors>
+        <Constructor name="ServerGUI" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="weatherUpdateCount" visibility="package" type="int"/>
+        <Field name="tweetUpdateCount" visibility="public" type="int"/>
+        <Field name="autoupdateButton" visibility="private" type="javax.swing.JButton"/>
+        <Field name="autoupdateLabel" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="tweetLabel" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="weatherButton" visibility="private" type="javax.swing.JButton"/>
+        <Field name="weatherLabel" visibility="private" type="javax.swing.JLabel"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="autoupdateButtonActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="weatherButtonActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="420.0" package="com.mycompany.serverapp" name="ServerMain" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="s" visibility="public" type="ServerGUI" isStatic="true"/>
+      </Fields>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="database" source="GetTwitter" target="Database" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="database" source="GetWeather" target="Database" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="s" source="ServerMain" target="ServerGUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="getWeather" source="GetTwitter" target="GetWeather" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

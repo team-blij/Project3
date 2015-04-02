@@ -16,14 +16,14 @@ import org.json.JSONException;
  *
  * @author Hans
  */
-public class serverGUI extends javax.swing.JFrame {
+public class ServerGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form serverGUI
      */
     int weatherUpdateCount = 0;
     public int tweetUpdateCount = 0;
-    public serverGUI() {
+    public ServerGUI() {
         initComponents();
     }
 
@@ -114,13 +114,13 @@ public class serverGUI extends javax.swing.JFrame {
             GetWeather gw = new GetWeather();
             weatherUpdateCount++;
             
-                
+               
                 gw.getWeatherAt();
                 
                 
             
         } catch (SQLException | IOException | JSONException ex) {
-            Logger.getLogger(serverGUI.class.getName()).log(Level.SEVERE, "niet", ex);
+            Logger.getLogger(ServerGUI.class.getName()).log(Level.SEVERE, "niet", ex);
         }
         
         weatherLabel.setText("Updated weather "+ weatherUpdateCount + " times");
@@ -130,7 +130,7 @@ public class serverGUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-      serverGUI s = new serverGUI();
+      ServerGUI s = new ServerGUI();
       s.show();
     }
 

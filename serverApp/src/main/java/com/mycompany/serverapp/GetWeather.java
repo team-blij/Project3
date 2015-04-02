@@ -34,7 +34,7 @@ public final class GetWeather {
 
     public GetWeather() {
         try {
-            System.out.println("Weer updaten");
+            //System.out.println("Weer updaten");
             getWeatherAt();
             
         }catch(IOException | JSONException ex  ){
@@ -79,7 +79,7 @@ public final class GetWeather {
                 }
                 catch(Exception e)
                 {
-                    System.out.println("Weer van vandaag staat al in de database");
+                    //System.out.println("Weer van vandaag staat al in de database");
                 }
                 database = null;
 
@@ -96,3 +96,5 @@ public final class GetWeather {
         return dateToday;
     }// end of getDateToday()
 }//end of getWeather class
+
+
