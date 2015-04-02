@@ -9,13 +9,13 @@ package com.mycompany.serverapp;
  *
  * @author Hans
  */
-public class serverMain {
-    public static serverGUI s = null;
+public class ServerMain {
+    public static ServerGUI s = null;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        s = new serverGUI();
+        s = new ServerGUI();
         s.setVisible(true);
     }
     
