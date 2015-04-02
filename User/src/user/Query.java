@@ -26,6 +26,19 @@ public class Query {
     }//end of executeQuery()
     
     
+    public void getBestAsset(){
+    
+    
+    }
+    
+    public void getWorstAsset(){
+    
+    }
+    
+    public void getBestAnimal(){
+        
+    }
+    
     public void getCountry(){
         query =     "SELECT COUNT(*), COUNTRY "
                 +   "FROM TWEET"
@@ -55,5 +68,25 @@ public class Query {
                 +   "WHERE WEATHER.RAIN = 'false' "
                 +   "AND WEATHER.SNOW = 'false';   "
                 ;    
+    }
+    
+    public void getLowTemperatureAndTweets(){
+        
+    }
+    
+    public void getHighTemperatureAndTweets(){
+    
+    }
+    
+    public void getBlijdorpTweetsAndDate(){
+    
+    }
+    
+    public void getBlijdorpTweets(){
+    
+    }
+    
+    public void getFollowersBlijdorp(){
+    
     }
 }//end of Query
