@@ -5,6 +5,9 @@
  */
 package user;
 
+import java.awt.BorderLayout;
+import javax.swing.JFrame;
+
 /**
  *
  * @author Nisha
@@ -15,7 +18,12 @@ public class User {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       NewJPanel2 newJPanel2 = new NewJPanel2();
+       JFrame jFrame = new JFrame();
+       jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+       jFrame.add(newJPanel2, BorderLayout.CENTER); 
+       jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       jFrame.setVisible(true);
     }
     
 }

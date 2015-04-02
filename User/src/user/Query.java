@@ -14,11 +14,12 @@ public class Query {
     String query = null;
     Database database = new Database();
     
-    public void countTweets(){
+    public String countTweets(){
         query =     "SELECT COUNT(*)"
                 +   "FROM TWEET"
                 +   "GROUP BY TWEET_ID;"
                 ;
+        return query;
     }//end of countTweets()
     
     public void executeQuery(){
@@ -39,64 +40,70 @@ public class Query {
         
     }
     
-    public void getCountry(){
+    public String getCountry(){
         query =     "SELECT COUNT(*), COUNTRY "
                 +   "FROM TWEET"
                 +   "GROUP BY COUNTRY;"
                 ;
+        return query;
     }//end of getCountry()
     
-    public void getRegion(){
+    public String getRegion(){
         query =     "SELECT COUNT(*), REGION"
                 +   "FROM TWEET"
                 +   "GROUP BY REGION;"
                 ;
+        return query;
     }
     
-    public void getRainAndTweets(){
+    public String getRainAndTweets(){
         //TODO
         query =     "SELECT COUNT(*)"
                 +   "FROM TWEET, WEATHER"
                 +   "WHERE WEATHER.RAIN =  'true'"
                 +   "AND TWEET.DATE = WEATHER.DATE;"
                 ;
+        return query;
     }
     
-    public void getGoodWeatherAndTweets(){
+    public String getGoodWeatherAndTweets(){
         query =     "SELECT COUNT(*)"
                 +   "FROM TWEET, WEATHER"
                 +   "WHERE WEATHER.RAIN = 'false' "
                 +   "AND WEATHER.SNOW = 'false'; "
                 +   "AND TWEET.DATE = WEATHER.DATE"
-
                 ;    
+        return query;
     }
     
-    public void getLowTemperatureAndTweets(){
+    public String getLowTemperatureAndTweets(){
          query =    "SELECT COUNT(*)"
                  +  "FROM TWEET, WEATHER"
                  +  "WHERE AVERAGETEMPERATURE <= 10"
                  +  "AND TWEET.DATE = WEATHER.DATE;"
                  ;
+         return query;
     }
     
-    public void getHighTemperatureAndTweets(){
+    public String getHighTemperatureAndTweets(){
          query =    "SELECT COUNT(*)"
                  +  "FROM TWEET, WEATHER"
                  +  "WHERE AVERAGETEMPERATURE >= 10"
                  +  "AND TWEET.DATE = WEATHER.DATE;"
                  ;       
+         return query;
     }
     
-    public void getBlijdorpTweetsAndDate(){
+    public String getBlijdorpTweetsAndDate(){
                  query =    "SELECT COUNT(*), DATE"
                          +  "FROM TWEET"
                          +  "WHERE User_name = ' Diergaarde Blijdorp'"
                          +  "GROUP BY DATE"
-                         ;                                       
+                         ;      
+         return query;
     }
     
-    public void getBlijdorpTweets(){
+    public String getBlijdorpTweets(){
                  query =    "SELECT "
                          + "("
                             + "SELECT count(*) "
@@ -118,14 +125,16 @@ public class Query {
                              + "AND User_name = ' Diergaarde Blijdorp') "
                              + "AS 'Other_Tweets'"
                          + ";"
-                         ;    
+                         ;  
+         return query;
     }
     
-    public void getFollowersBlijdorp(){
+    public String getFollowersBlijdorp(){
                  query =    "SELECT FOLLOWERS, DATE"
                          +  "FROM TWEET"
                          +  "WHERE User_name = ' Diergaarde Blijdorp'"
                          +  "GROUP BY DATE;"
-                         ;      
+                         ;  
+         return query;        
     }
 }//end of Query

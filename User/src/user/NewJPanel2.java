@@ -17,7 +17,9 @@ public class NewJPanel2 extends javax.swing.JPanel {
     public NewJPanel2() {
         initComponents();
     }
-
+    
+    CreateChart createChart = null;
+    Query query = new Query();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,6 +81,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
         jLabel3.setText("Zoo");
 
         choiceMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tweets", "Zoo", "Animal", "Weather" }));
+        choiceMenu.setSelectedIndex(1);
         choiceMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choiceMenuActionPerformed(evt);
@@ -164,6 +167,14 @@ public class NewJPanel2 extends javax.swing.JPanel {
 
     private void choiceMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choiceMenuActionPerformed
         // TODO add your handling code here:
+        switch (choiceMenu.getSelectedIndex()){
+            case 0: 
+                createChart = new CreateChart(query.countTweets());
+        
+        
+        
+        }
+        
     }//GEN-LAST:event_choiceMenuActionPerformed
 
 
