@@ -24,25 +24,7 @@ public class GetTwitter {
     Database database = new Database();
     private int area_idArea = 0;
     private int animal_idAnimal = 0;
-    Status status = null;
-    //Information about date, id, source, if it is favorited, enz.
-    String user_Name = null;
-    //The name of the user
-    String message = null;
-    //The tweet
-    String location = null;
-    //the location of the user
-    java.util.Date dateUtil = null;
-    Date date = null;
-    //the date
-    long user_ID = 0;
-    // user ID
-    long tweet_ID = 0;
-    //tweet ID
-    int followers = 0;
-    //The amount of followers the user has
-    String region = null;
-    String country = null;
+
 
 
 
@@ -70,16 +52,17 @@ public class GetTwitter {
                 QueryResult result = twitterInstance.search(query);
                 ArrayList tweets = (ArrayList) result.getTweets();
                 for (int i = 0; i < result.getCount(); i++){
-                status = (Status) tweets.get(i);
-                user_Name = status.getUser().getName();
-                message = status.getText();
-                location = status.getUser().getLocation();
+                Status status = (Status) tweets.get(i);
+                String user_Name = status.getUser().getName();
+                String message = status.getText();
+                String location = status.getUser().getLocation();
+                String region = null;
                 if(status.getGeoLocation() != null){
                     double latitude = status.getGeoLocation().getLatitude();
                     double longitude = status.getGeoLocation().getLongitude();
                     GetLocation getLocation = new GetLocation(latitude, longitude);
                     region = getLocation.getRegion();
-                    region = getLocation.getCountry();
+                    country = getLocation.getCountry();
                 }
 
                 java.util.Date dateUtil = status.getCreatedAt();
