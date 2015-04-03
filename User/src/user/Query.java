@@ -12,7 +12,7 @@ import java.sql.*;
  */
 public class Query {
     String query = null;
-    Database database = new Database();
+    //Database database = new Database();
     
     public String countTweets(){
         query =     "SELECT COUNT(*)"
@@ -23,7 +23,7 @@ public class Query {
     }//end of countTweets()
     
     public void executeQuery(){
-        database.query(query);
+        //database.query(query);
     }//end of executeQuery()
     
     

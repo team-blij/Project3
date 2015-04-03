@@ -153,7 +153,7 @@ public class GetTwitter {
             for (String s : AreasInDatabase) {
                 return s;
             }
-        return "no Area";
+        return "no area";
     }//end of getAreaByAnimal()
 
 }// end of GetTwitter class
