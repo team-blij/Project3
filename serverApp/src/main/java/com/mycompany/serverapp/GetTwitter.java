@@ -33,7 +33,7 @@ public class GetTwitter {
 
     }
 
-    private void setup() throws SQLException {
+    public void setup() throws SQLException {
         cb.setOAuthConsumerKey("BiTybWWcHtZfNDF6k27XQysZo");
         cb.setOAuthConsumerSecret("SarY78keJf2LRJJS38xFbpjizvkFbKDxg0eULV5NJQ36TxJW07");
         cb.setOAuthAccessToken("3092334623-zofIrzyqSpVlnYHq42ozb2ubz9uU3d6D5CmcMfA");
@@ -75,7 +75,7 @@ public class GetTwitter {
                 user_Name = status.getUser().getName();
                 message = status.getText();
 
-                //System.out.println(status.getGeoLocation());
+                //System.out.println(status.getGeoLocation() + "= geo data" );
                 if (status.getGeoLocation() != null) {
                     double latitude = status.getGeoLocation().getLatitude();
                     double longitude = status.getGeoLocation().getLongitude();
@@ -90,6 +90,7 @@ public class GetTwitter {
                 tweet_ID = status.getId();
                 followers = status.getUser().getFollowersCount();
                 String Animal = getAnimal(message);
+                //System.out.println("Animal: " + Animal);
                 String Area = getArea(message);
                         if(!Animal.equals("no animal") && Area.equals("no area")){
                         Area = getAreaByAnimal(Animal);
@@ -98,9 +99,9 @@ public class GetTwitter {
                 try {
                     database.insertTweetIntoTable(tweet_ID, date, message, region, country, Area, user_Name, followers, user_ID, Animal);
 
-                    ServerMain.s.tweetUpdateCount++;
+                    ServerGUI.tweetUpdateCount++;
                 } catch (Exception e) {
-                    
+                    //System.out.println(e);
                 }
             }
             return result;

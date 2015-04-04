@@ -8,8 +8,12 @@ package com.mycompany.serverapp;
 import java.io.IOException;
 
 import java.sql.SQLException;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.json.JSONException;
 
 /**
@@ -21,11 +25,48 @@ public class ServerGUI extends javax.swing.JFrame {
     /**
      * Creates new form serverGUI
      */
+    private boolean autoUpdate;
     int weatherUpdateCount = 0;
-    public int tweetUpdateCount = 0;
+    public static int tweetUpdateCount = 10;
+    Timer timer;
+    TimerTask hourlyTask = new TimerTask() {
+        @Override
+        public void run() {
+            GetWeather gw = new GetWeather();
+
+        }
+    };
+
     public ServerGUI() {
         initComponents();
     }
+
+    
+    
+    TimerTask fiveMinTask = new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    //System.out.println("1 min voorbij!");
+                    GetTwitter gt = new GetTwitter();
+                    tweetLabel.setText("Updated " + tweetUpdateCount + " tweets");
+
+                } catch (SQLException ex) {
+                    System.out.println("Auto update twitter crash!");
+
+                }
+
+            }
+        };
+    
+    
+    
+    
+
+    
+    {
+        
+    };
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,7 +81,7 @@ public class ServerGUI extends javax.swing.JFrame {
         autoupdateButton = new javax.swing.JButton();
         tweetLabel = new javax.swing.JLabel();
         weatherLabel = new javax.swing.JLabel();
-        autoupdateLabel = new javax.swing.JLabel();
+        autoUpdateLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,7 +104,7 @@ public class ServerGUI extends javax.swing.JFrame {
 
         weatherLabel.setText("Updated weather 0 times");
 
-        autoupdateLabel.setText("Auto update not running");
+        autoUpdateLabel.setText("Auto update not running");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,7 +119,7 @@ public class ServerGUI extends javax.swing.JFrame {
                 .addComponent(tweetLabel)
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(autoupdateLabel)
+                    .addComponent(autoUpdateLabel)
                     .addComponent(autoupdateButton))
                 .addContainerGap())
         );
@@ -89,7 +130,7 @@ public class ServerGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tweetLabel)
                     .addComponent(weatherLabel)
-                    .addComponent(autoupdateLabel))
+                    .addComponent(autoUpdateLabel))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(weatherButton)
@@ -102,41 +143,54 @@ public class ServerGUI extends javax.swing.JFrame {
 
     private void autoupdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autoupdateButtonActionPerformed
         try {
-            GetTwitter gt =  new GetTwitter();
-            tweetLabel.setText("Updated "+ tweetUpdateCount +" tweets");
+            //TODO catch connection problem to the server.
+            //TODO Exception in thread "AWT-EventQueue-0" java.lang.IllegalStateException: Task already scheduled or cancelled
+            if (autoUpdate == false) {
+                GetTwitter gt = new GetTwitter();
+                tweetLabel.setText("Updated " + tweetUpdateCount + " tweets");
+                autoUpdateLabel.setText("AutoUpdate is running");
+                
+                timer = new Timer();
+                
+                try{
+                timer.schedule(hourlyTask, 0l, 1000 * 60 * 60);
+                timer.schedule(fiveMinTask, 0l, 1000 * 60 * 5);}
+                catch(Exception e)
+                {
+                    System.out.println("timer loopt al");
+                }
+                autoupdateButton.setText("Stop auto-update");
+                autoUpdate = true;
+            } else {
+                timer.cancel();
+                autoUpdateLabel.setText("AutoUpdate is not running");
+                autoupdateButton.setText("Start auto-update");
+                autoUpdate = false;
+            }
         } catch (SQLException ex) {
-            
+
         }
     }//GEN-LAST:event_autoupdateButtonActionPerformed
 
     private void weatherButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weatherButtonActionPerformed
-        try {                                              
-            GetWeather gw = new GetWeather();
-            weatherUpdateCount++;
-            
-               
-                gw.getWeatherAt();
-                
-                
-            
-        } catch (SQLException | IOException | JSONException ex) {
-            Logger.getLogger(ServerGUI.class.getName()).log(Level.SEVERE, "niet", ex);
-        }
-        
-        weatherLabel.setText("Updated weather "+ weatherUpdateCount + " times");
+        GetWeather gw = new GetWeather();
+
+        weatherUpdateCount++;
+
+        weatherLabel.setText("Updated weather " + weatherUpdateCount + " times");
     }//GEN-LAST:event_weatherButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-      ServerGUI s = new ServerGUI();
-      s.show();
+        ServerGUI s = new ServerGUI();
+        s.show();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel autoUpdateLabel;
     private javax.swing.JButton autoupdateButton;
-    private javax.swing.JLabel autoupdateLabel;
     private javax.swing.JLabel tweetLabel;
     private javax.swing.JButton weatherButton;
     private javax.swing.JLabel weatherLabel;

@@ -42,9 +42,9 @@ public final class GetWeather {
         } catch (SQLException ex) {
             Logger.getLogger(GetWeather.class.getName()).log(Level.SEVERE, null, ex);
         }finally {
-            try{
-            database.closeDatabase();
-            }catch(SQLException ex){}
+            
+            //database.closeDatabase();
+            
         }
     }//end of constructor
 
@@ -54,6 +54,7 @@ public final class GetWeather {
                 openWeatherMap = new OpenWeatherMap("");
                 //Getting weather at Rotterdam
                 currentWeather = openWeatherMap.currentWeatherByCityName("Rotterdam, NL");
+                //System.out.println("curent weather: " + toCelcius(currentWeather.getMainInstance().getTemperature()));
                 minTemperature = currentWeather.getMainInstance().getMinTemperature();
                 maxTemperature = currentWeather.getMainInstance().getMaxTemperature();
 
@@ -81,7 +82,7 @@ public final class GetWeather {
                 }
                 catch(Exception ex)
                 {
-                    //TODO
+                    //System.out.println(ex);
                 }
                 database = null;
 

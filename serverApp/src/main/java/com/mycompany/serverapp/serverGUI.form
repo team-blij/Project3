@@ -33,7 +33,7 @@
               <Component id="tweetLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="autoupdateLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="autoUpdateLabel" min="-2" max="-2" attributes="0"/>
                   <Component id="autoupdateButton" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -47,7 +47,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="tweetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="weatherLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="autoupdateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="autoUpdateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -87,7 +87,7 @@
         <Property name="text" type="java.lang.String" value="Updated weather 0 times"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="autoupdateLabel">
+    <Component class="javax.swing.JLabel" name="autoUpdateLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Auto update not running"/>
       </Properties>

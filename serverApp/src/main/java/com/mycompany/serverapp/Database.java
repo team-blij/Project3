@@ -58,7 +58,7 @@ public class Database {
         
         
         statement = connection.createStatement();
-        //statement.executeUpdate("USE twitterdata; ");
+        statement.executeUpdate("USE team_blij; ");
 
     }//end of useDatabase()
 
@@ -98,14 +98,14 @@ public class Database {
                 +  Animal
                 + "\");";
         statement.executeUpdate(sql);
-        //System.out.println("After the query");
+        System.out.println("After the query");
         return "Ingevoert in database.";
 
     }// end of insertIntoTable()
 
     public String insertWeatherData(Date date_Today, String rain, float averageTemperature, float minTemperature, float maxTemperature, String snow, String clouds, String wind) throws SQLException{
         statement = connection.createStatement();
-        statement.executeUpdate("DELETE FROM `twitterdata`.`weather` WHERE `date`="+ date_Today +";");
+        statement.executeUpdate("DELETE FROM `team_blij`.`weather` WHERE `date`="+ date_Today +";");
         String sql = "INSERT INTO Weather"
                 + "(date, rain, averageTemperature, lowTemperature, highTemperature, snow, clouds, wind) "
                 + "VALUES ('"
@@ -163,7 +163,7 @@ public class Database {
    
             return arrayListString;
         }catch(SQLException ex){
-            //System.out.println("Failed to connect and give back data.");
+            System.out.println("Failed to connect and give back area data.");
         
             return arrayListString;
         }
@@ -179,7 +179,7 @@ public class Database {
         }
         return arrayListStringArea;
     }catch(SQLException ex){
-        //System.out.println("Failed to connect and give back data.");
+        System.out.println("Failed to connect and give back animal data.");
         return arrayListStringArea;
     }
     }//end of getAnimal()
