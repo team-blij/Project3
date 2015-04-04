@@ -12,9 +12,7 @@ package user;
 public class CreateChart {
     
     public CreateChart(String sql){
-        Query query = new Query();
-        
-       
+    
     
     }
     
