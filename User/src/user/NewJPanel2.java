@@ -5,6 +5,8 @@
  */
 package user;
 
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author Nisha
@@ -18,8 +20,25 @@ public class NewJPanel2 extends javax.swing.JPanel {
         initComponents();
     }
     
+    private void setCheckBox(String[] items){
+        DefaultComboBoxModel model = (DefaultComboBoxModel) choiceBox2.getModel();
+        model.removeAllElements();
+        
+        for(String item : items){
+        model.addElement(item);
+        }
+        choiceBox2.setModel(model);
+                
+    
+    }
+    
     CreateChart createChart = null;
     Query query = new Query();
+    String[] tweetAnalyse = {"Most popular area", "Least popular area", "Visitors country", "Visitors region" };
+    String[] animalAnalyse = {"Most popular animals"};
+    String[] zooAnalyse = {"Activity", "Tweet content", "Followers"};
+    String[] weatherAnalyse = {"Rainy weather", "Sunny weather", "Low temperature", "High temperature"};
+    String   selection = "";
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,6 +66,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         choiceMenu = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
+        choiceBox2 = new javax.swing.JComboBox();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -81,7 +101,6 @@ public class NewJPanel2 extends javax.swing.JPanel {
         jLabel3.setText("Zoo");
 
         choiceMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tweets", "Zoo", "Animal", "Weather" }));
-        choiceMenu.setSelectedIndex(1);
         choiceMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choiceMenuActionPerformed(evt);
@@ -89,6 +108,12 @@ public class NewJPanel2 extends javax.swing.JPanel {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Barchart.png"))); // NOI18N
+
+        choiceBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                choiceBox2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,6 +139,8 @@ public class NewJPanel2 extends javax.swing.JPanel {
                                     .addComponent(choiceMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(choiceBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -132,7 +159,8 @@ public class NewJPanel2 extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(choiceMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(choiceBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(67, 96, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -169,16 +197,86 @@ public class NewJPanel2 extends javax.swing.JPanel {
         // TODO add your handling code here:
         switch (choiceMenu.getSelectedIndex()){
             case 0: 
-                createChart = new CreateChart(query.countTweets());
-        
-        
-        
+                setCheckBox(tweetAnalyse);
+                selection = "Tweets";
+                break;
+            case 1:   
+                setCheckBox(zooAnalyse);
+                selection = "Zoo";
+                break;
+            case 2: 
+                setCheckBox(animalAnalyse);
+                selection = "Animal";
+                break;
+            case 3:
+                setCheckBox(weatherAnalyse);
+                selection = "Weather";
+                break;       
         }
-        
     }//GEN-LAST:event_choiceMenuActionPerformed
+
+    private void choiceBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choiceBox2ActionPerformed
+        switch (selection){
+            case "Tweets":
+                    switch (choiceBox2.getSelectedIndex()){
+                        case 0: 
+                            createChart = new CreateChart(query.getBestAsset()); 
+                            break;
+                        case 1:
+                            createChart = new CreateChart(query.getWorstAsset());
+                            break;
+                        case 2:
+                            createChart = new CreateChart(query.getCountry());
+                        case 3: 
+                            createChart = new CreateChart(query.getRegion());
+                    }
+                break;
+            case "Zoo":
+                    switch (choiceBox2.getSelectedIndex()){
+                        case 0: 
+                            createChart = new CreateChart(query.getBestAnimal()); 
+                            break;
+                    }
+                break;
+            case "Animal":
+                    switch (choiceBox2.getSelectedIndex()){
+                        case 0: 
+                            createChart = new CreateChart(query.getBlijdorpTweetsAndDate()); 
+                            break;
+                        case 1:
+                            createChart = new CreateChart(query.getBlijdorpTweets());
+                            break;
+                        case 2:
+                            createChart = new CreateChart(query.getFollowersBlijdorp());
+                            break;
+                    }
+                break;
+            case "Weather":
+                        switch (choiceBox2.getSelectedIndex()){
+                            case 0: 
+                                createChart = new CreateChart(query.getRainAndTweets()); 
+                                break;
+                            case 1:
+                                createChart = new CreateChart(query.getGoodWeatherAndTweets());
+                                break;
+                            case 2:
+                                createChart = new CreateChart(query.getLowTemperatureAndTweets());
+                                break;
+                            case 3:
+                                createChart = new CreateChart(query.getHighTemperatureAndTweets());
+                                break;    
+                        }
+                break;
+        }//end of (selection) switch
+            
+            
+            
+        
+    }//GEN-LAST:event_choiceBox2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox choiceBox2;
     private javax.swing.JComboBox choiceMenu;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
