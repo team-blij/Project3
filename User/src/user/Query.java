@@ -13,7 +13,7 @@ import java.sql.*;
 public class Query {
     String query = null;
     String time = " date > NOW() - INTERVAL 1 Month ";
-    //Database database = new Database();
+    Database database = new Database();
     
     
     public void setMonth(){
@@ -28,6 +28,10 @@ public class Query {
         time = " date > NOW() - INTERVAL 1 Day ";
     }
     
+    public void executeQuery(){
+        database.query(query);
+    }//end of executeQuery()
+        
     public String countTweets(){
         query =     "   SELECT COUNT(*)"
                 +   "   FROM TWEET"
@@ -39,9 +43,7 @@ public class Query {
         return query;
     }//end of countTweets()
     
-    public void executeQuery(){
-        //database.query(query);
-    }//end of executeQuery()
+
     
     
     public String getBestAsset(){
@@ -53,6 +55,7 @@ public class Query {
                     +   "   group by Area "
                     +   "   order by count(Area) desc;"
                     ;
+            
             return query;
     }
     
