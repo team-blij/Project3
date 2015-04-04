@@ -1,12 +1,24 @@
-/**
- * Created by Elize on 17-3-2015.
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+package user;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.*;
 import java.util.ArrayList;
-
-
+/**
+ *
+ * @author Elize
+ */
 public class Database {
+    
+   
     private Connection connection = null;
     private Statement statement = null;
     private ResultSet resultSet = null;
@@ -18,7 +30,6 @@ public class Database {
     private void connectToDatabase(){
 
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             Class.forName("com.mysql.jdbc.Driver");
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
 
@@ -33,7 +44,8 @@ public class Database {
         }catch(SQLException ex){
             
         }catch(ClassNotFoundException ex){
-                    System.exit(0);
+                    
+                            
         }
 
 
@@ -64,6 +76,4 @@ public class Database {
 
     }//get Query();
 
-   
-
-}// end of class Database
+}

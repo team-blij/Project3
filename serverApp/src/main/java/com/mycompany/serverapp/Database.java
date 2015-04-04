@@ -2,9 +2,7 @@
  * Created by Elize on 17-3-2015.
  */
 
-package com.mycompany.serverapp;
-
-//import java.sql
+package user;
 
 
 import java.sql.Connection;

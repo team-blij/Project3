@@ -13,7 +13,7 @@ import java.sql.*;
 public class Query {
     String query = null;
     String time = " date > NOW() - INTERVAL 1 Month ";
-    //Database database = new Database();
+    Database database = new Database();
     
     
     public void setMonth(){
