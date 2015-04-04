@@ -28,8 +28,16 @@ public class Query {
     
     
     public void getBestAsset(){
+            query =     "select Area, count(Area) as AreaCount "
+                    +   "from tweet "
+                    +   " where Area not like \"%area%\" "
+                    +   "group by Area "
+                    +   "order by count(Area) desc;"
+                    ;
+ 
+   
     
-    
+   
     }
     
     public void getWorstAsset(){
@@ -37,7 +45,15 @@ public class Query {
     }
     
     public void getBestAnimal(){
-        
+            query =     "SELECT Animal, count(Animal)"
+                    +   "from tweet"
+                    +   "WHERE Animal NOT LIKE '%animal%'"
+                    +   "GROUP BY Animal;"
+                    ;
+ 
+    
+    
+    
     }
     
     public String getCountry(){
