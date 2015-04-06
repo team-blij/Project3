@@ -13,6 +13,7 @@ import java.util.TimerTask;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static javafx.application.Platform.exit;
 
 import org.json.JSONException;
 
@@ -27,8 +28,8 @@ public class ServerGUI extends javax.swing.JFrame {
      */
     private boolean autoUpdate;
     int weatherUpdateCount = 0;
-    public static int tweetUpdateCount = 10;
-    Timer timer;
+    public int tweetUpdateCount = 0;
+    
     TimerTask hourlyTask = new TimerTask() {
         @Override
         public void run() {
@@ -43,11 +44,11 @@ public class ServerGUI extends javax.swing.JFrame {
 
     
     
-    TimerTask fiveMinTask = new TimerTask() {
+   TimerTask fiveMinTask = new TimerTask() {
             @Override
             public void run() {
                 try {
-                    //System.out.println("1 min voorbij!");
+                    
                     GetTwitter gt = new GetTwitter();
                     tweetLabel.setText("Updated " + tweetUpdateCount + " tweets");
 
@@ -150,22 +151,20 @@ public class ServerGUI extends javax.swing.JFrame {
                 tweetLabel.setText("Updated " + tweetUpdateCount + " tweets");
                 autoUpdateLabel.setText("AutoUpdate is running");
                 
-                timer = new Timer();
-                
-                try{
+                Timer timer = new Timer();
                 timer.schedule(hourlyTask, 0l, 1000 * 60 * 60);
-                timer.schedule(fiveMinTask, 0l, 1000 * 60 * 5);}
-                catch(Exception e)
-                {
-                    System.out.println("timer loopt al");
-                }
-                autoupdateButton.setText("Stop auto-update");
+                timer.schedule(fiveMinTask, 0l, 1000 * 60 * 5);
+                autoupdateButton.setText("Restart application");
                 autoUpdate = true;
+                
             } else {
-                timer.cancel();
+                
                 autoUpdateLabel.setText("AutoUpdate is not running");
-                autoupdateButton.setText("Start auto-update");
+                
                 autoUpdate = false;
+                ServerGUI s = new ServerGUI();
+                s.setVisible(true);
+                exit();
             }
         } catch (SQLException ex) {
 
@@ -186,12 +185,13 @@ public class ServerGUI extends javax.swing.JFrame {
     public static void main(String args[]) {
         ServerGUI s = new ServerGUI();
         s.show();
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel autoUpdateLabel;
     private javax.swing.JButton autoupdateButton;
-    private javax.swing.JLabel tweetLabel;
+    private static javax.swing.JLabel tweetLabel;
     private javax.swing.JButton weatherButton;
     private javax.swing.JLabel weatherLabel;
     // End of variables declaration//GEN-END:variables

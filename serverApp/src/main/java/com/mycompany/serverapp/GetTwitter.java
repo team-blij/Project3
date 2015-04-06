@@ -14,32 +14,43 @@ import twitter4j.conf.ConfigurationBuilder;
 public class GetTwitter {
 
     //The Twitter instances:
-    private ConfigurationBuilder cb = new ConfigurationBuilder();
+    private final ConfigurationBuilder cb = new ConfigurationBuilder();
     private Twitter twitterInstance = null;
 
-    private String blijdorpQuery = "rotterdamzoo until:" + getDateToday();
-    private Query query = new Query("rotterdamzoo , blijdorp");
+
+    private final Query query = new Query("@rotterdamzoo");
+    private final Query query2= new Query("blijdorp");
+    private final Query query3 = new Query("#blijdorp");
+    private final Query query4 = new Query("from:rotterdamzoo");
+    
+    
+   
+   
 
     //Variables that are needed for gathering data:
     public User Blijdorp = null;
     Database database = new Database();
-    private int area_idArea = 0;
-    private int animal_idAnimal = 0;
+
     Status status = null;
-
+    Twitter twitter = null;
     public GetTwitter() throws SQLException {
-
+        query.setCount(100);
+        query2.setCount(100);
+        query3.setCount(100);
+        query4.setCount(100);
+        
         setup();
 
     }
 
-    public void setup() throws SQLException {
+    public final void setup() throws SQLException {
         cb.setOAuthConsumerKey("BiTybWWcHtZfNDF6k27XQysZo");
         cb.setOAuthConsumerSecret("SarY78keJf2LRJJS38xFbpjizvkFbKDxg0eULV5NJQ36TxJW07");
         cb.setOAuthAccessToken("3092334623-zofIrzyqSpVlnYHq42ozb2ubz9uU3d6D5CmcMfA");
         cb.setOAuthAccessTokenSecret("dTlH0Qa1kPbwXHCa5xkkRhkIyLeD2JvP2bqd1UhNeioID");
         //All keys are private! >:(
         twitterInstance = new TwitterFactory(cb.build()).getInstance();
+        
         fetchAndDrawTweets();
 
     }// end of setup()
@@ -61,12 +72,20 @@ public class GetTwitter {
             String region = null;
             String country = null;
             QueryResult result = twitterInstance.search(query);
+            QueryResult result2 = twitterInstance.search(query2);
+            QueryResult result3 = twitterInstance.search(query3);
+            QueryResult result4 = twitterInstance.search(query4);
             ArrayList tweets = (ArrayList) result.getTweets();
-            //System.out.println("Starting for loop tweets");
+            tweets.addAll(result2.getTweets());
+            tweets.addAll(result3.getTweets());
+            tweets.addAll(result4.getTweets());
+            
             if (tweets.isEmpty()) {
                 System.out.println("Geen tweets");
                 return null;
             }
+            
+            
 
             for (int i = 0; i < result.getCount(); i++) {
                 //System.out.println(tweets.get(i));
@@ -99,7 +118,7 @@ public class GetTwitter {
                 try {
                     database.insertTweetIntoTable(tweet_ID, date, message, region, country, Area, user_Name, followers, user_ID, Animal);
 
-                    ServerGUI.tweetUpdateCount++;
+                    //ServerGUI.tweetUpdateCount++;
                 } catch (Exception e) {
                     //System.out.println(e);
                 }
