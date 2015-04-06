@@ -28,7 +28,7 @@ public class Query {
         time = " date > NOW() - INTERVAL 1 Day ";
     }
     
-    public String countTweets(){
+    public ResultSet countTweets(){
         query =     "   SELECT COUNT(*)"
                 +   "   FROM TWEET"
                 +   "   WHERE"
@@ -36,15 +36,15 @@ public class Query {
                 +   "   GROUP BY TWEET_ID "
                 +   ";"
                 ;
-        return query;
+        return executeQuery(query);
     }//end of countTweets()
     
-    public void executeQuery(){
-        //database.query(query);
+    public ResultSet executeQuery(String query){
+        return database.query(query);
     }//end of executeQuery()
     
     
-    public String getBestAsset(){
+    public ResultSet getBestAsset(){
             query =     "   select Area, count(Area) as AreaCount "
                     +   "   from tweet "
                     +   "   where Area not like \"%area%\" "
@@ -53,10 +53,10 @@ public class Query {
                     +   "   group by Area "
                     +   "   order by count(Area) desc;"
                     ;
-            return query;
+            return executeQuery(query);
     }
     
-    public String getWorstAsset(){
+    public ResultSet getWorstAsset(){
             query =     "   select Area, count(Area) as AreaCount "
                     +   "   from tweet "
                     +   "   where Area not like \"%area%\" "
@@ -65,13 +65,13 @@ public class Query {
                     +   "   group by Area"
                     +   "   order by count(Area); "
                     ;
-            return query;
+            return executeQuery(query);
     
     
     
     }
     
-    public String getBestAnimal(){
+    public ResultSet getBestAnimal(){
             query =     "   SELECT Animal, count(Animal)"
                     +   "   from tweet"
                     +   "   WHERE Animal NOT LIKE '%animal%'"
@@ -80,33 +80,32 @@ public class Query {
                     +   "   GROUP BY Animal;"
                     ;
  
-        return query;
+        return executeQuery(query);
     
     
     }
     
-    public String getCountry(){
+    public ResultSet getCountry(){
         query =     "   SELECT COUNT(*), COUNTRY "
                 +   "   FROM TWEET"
                 +   "   WHERE"
                 +       time
                 +   "   GROUP BY COUNTRY;"
                 ;
-        return query;
+        return executeQuery(query);
     }//end of getCountry()
     
-    public String getRegion(){
+    public ResultSet getRegion(){
         query =     "   SELECT COUNT(*), REGION"
                 +   "   FROM TWEET"
                 +   "   WHERE "
                 +       time
                 +   "   GROUP BY REGION;"
                 ;
-        return query;
+        return executeQuery(query);
     }
     
-    public String getRainAndTweets(){
-        //TODO
+    public ResultSet getRainAndTweets(){
         query =     "   SELECT COUNT(*)"
                 +   "   FROM TWEET, WEATHER"
                 +   "   WHERE WEATHER.RAIN =  'true'"
@@ -114,10 +113,10 @@ public class Query {
                 +       time
                 +   "   AND TWEET.DATE = WEATHER.DATE;"
                 ;
-        return query;
+        return executeQuery(query);
     }
     
-    public String getGoodWeatherAndTweets(){
+    public ResultSet getGoodWeatherAndTweets(){
         query =     "   SELECT COUNT(*)"
                 +   "   FROM TWEET, WEATHER"
                 +   "   WHERE WEATHER.RAIN = 'false' "
@@ -127,10 +126,10 @@ public class Query {
                 +       time 
                 +   ";"
                 ;    
-        return query;
+        return executeQuery(query);
     }
     
-    public String getLowTemperatureAndTweets(){
+    public ResultSet getLowTemperatureAndTweets(){
          query =    "   SELECT COUNT(*)"
                  +  "   FROM TWEET, WEATHER"
                  +  "   WHERE AVERAGETEMPERATURE <= 10"
@@ -139,10 +138,10 @@ public class Query {
                  +      time
                  +  ";"
                  ;
-         return query;
+         return executeQuery(query);
     }
     
-    public String getHighTemperatureAndTweets(){
+    public ResultSet getHighTemperatureAndTweets(){
          query =    "   SELECT COUNT(*)"
                  +  "   FROM TWEET, WEATHER"
                  +  "   WHERE AVERAGETEMPERATURE >= 10"
@@ -151,10 +150,10 @@ public class Query {
                  +      time
                  +  ";"
                  ;       
-         return query;
+         return executeQuery(query);
     }
     
-    public String getBlijdorpTweetsAndDate(){
+    public ResultSet getBlijdorpTweetsAndDate(){
                  query =    "   SELECT COUNT(*), DATE"
                          +  "   FROM TWEET"
                          +  "   WHERE User_name = ' Diergaarde Blijdorp'"
@@ -162,10 +161,10 @@ public class Query {
                          +      time
                          +  "   GROUP BY DATE"
                          ;      
-         return query;
+         return executeQuery(query);
     }
     
-    public String getBlijdorpTweets(){
+    public ResultSet getBlijdorpTweets(){
                  query =         "   SELECT "
                             +    "    ("
                             +    " SELECT count(*) "
@@ -194,10 +193,10 @@ public class Query {
                             +    " AS 'Other_Tweets'"
                             +    " ;"
                          ;  
-         return query;
+         return executeQuery(query);
     }
     
-    public String getFollowersBlijdorp(){
+    public ResultSet getFollowersBlijdorp(){
                  query =    " SELECT FOLLOWERS, DATE"
                          +  " FROM TWEET"
                          +  " WHERE User_name = ' Diergaarde Blijdorp'"
@@ -205,6 +204,6 @@ public class Query {
                          +    time
                          +  " GROUP BY DATE;"
                          ;  
-         return query;        
+         return executeQuery(query);        
     }
 }//end of Query
