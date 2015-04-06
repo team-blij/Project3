@@ -5,13 +5,15 @@
  */
 package user;
 
+import java.sql.ResultSet;
+
 /**
  *
  * @author School
  */
 public class CreateChart {
     
-    public CreateChart(String sql){
+    public CreateChart(ResultSet resultSet){
     
     
     }
