@@ -18,7 +18,7 @@ public class User {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Screen newJPanel2 = new Screen();
+       NewJPanel2 newJPanel2 = new NewJPanel2();
        JFrame jFrame = new JFrame();
        jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
        jFrame.add(newJPanel2, BorderLayout.CENTER); 
