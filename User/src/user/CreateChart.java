@@ -29,7 +29,7 @@ import org.jfree.chart.ChartUtilities;
  *
  * @author School
  */
-public  class CreateChart{
+public class CreateChart{
     
 //    public void mainChart()
 //    {
@@ -137,7 +137,7 @@ public  class CreateChart{
         ImageIcon ii = new ImageIcon(chart.createBufferedImage(592, 500));
         
         NewJPanel2.setChartLabel(ii);
-        System.out.println("TEST");
+      
         
     }
     
@@ -157,7 +157,7 @@ public  class CreateChart{
         
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         
-        System.out.println(dateFormat.format(c.getTime()));
+
         
         
         
