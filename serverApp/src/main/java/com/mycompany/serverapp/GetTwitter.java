@@ -118,7 +118,7 @@ public class GetTwitter {
                 try {
                     database.insertTweetIntoTable(tweet_ID, date, message, region, country, Area, user_Name, followers, user_ID, Animal);
 
-                    //ServerGUI.tweetUpdateCount++;
+                    ServerGUI.tweetUpdateCount++;
                 } catch (Exception e) {
                     //System.out.println(e);
                 }

@@ -27,14 +27,14 @@ public class ServerGUI extends javax.swing.JFrame {
      * Creates new form serverGUI
      */
     private boolean autoUpdate;
-    int weatherUpdateCount = 0;
-    public int tweetUpdateCount = 0;
+    public static int weatherUpdateCount = 0;
+    public static int tweetUpdateCount = 0;
     
     TimerTask hourlyTask = new TimerTask() {
         @Override
         public void run() {
             GetWeather gw = new GetWeather();
-
+            weatherLabel.setText("Updated weather " + weatherUpdateCount + " times");
         }
     };
 
@@ -65,9 +65,7 @@ public class ServerGUI extends javax.swing.JFrame {
     
 
     
-    {
-        
-    };
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -115,10 +113,11 @@ public class ServerGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(weatherButton)
-                    .addComponent(weatherLabel))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(tweetLabel)
-                .addGap(35, 35, 35)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(weatherLabel)
+                        .addGap(30, 30, 30)
+                        .addComponent(tweetLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(autoUpdateLabel)
                     .addComponent(autoupdateButton))
@@ -162,9 +161,10 @@ public class ServerGUI extends javax.swing.JFrame {
                 autoUpdateLabel.setText("AutoUpdate is not running");
                 
                 autoUpdate = false;
+                
                 ServerGUI s = new ServerGUI();
                 s.setVisible(true);
-                exit();
+                this.dispose();
             }
         } catch (SQLException ex) {
 
@@ -175,8 +175,8 @@ public class ServerGUI extends javax.swing.JFrame {
         GetWeather gw = new GetWeather();
 
         weatherUpdateCount++;
-
-        weatherLabel.setText("Updated weather " + weatherUpdateCount + " times");
+        
+        
     }//GEN-LAST:event_weatherButtonActionPerformed
 
     /**
@@ -193,6 +193,6 @@ public class ServerGUI extends javax.swing.JFrame {
     private javax.swing.JButton autoupdateButton;
     private static javax.swing.JLabel tweetLabel;
     private javax.swing.JButton weatherButton;
-    private javax.swing.JLabel weatherLabel;
+    public static javax.swing.JLabel weatherLabel;
     // End of variables declaration//GEN-END:variables
 }

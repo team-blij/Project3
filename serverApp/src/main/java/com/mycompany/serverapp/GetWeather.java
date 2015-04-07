@@ -79,6 +79,8 @@ public final class GetWeather {
                 database = new Database();
                 try{
                 database.insertWeatherData(date, rain, averageTemperature, minTemperature, maxTemperature, snow, clouds, wind);
+                ServerGUI.weatherUpdateCount++;
+                
                 }
                 catch(Exception ex)
                 {
