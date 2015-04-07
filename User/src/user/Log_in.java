@@ -9,12 +9,12 @@ package user;
  *
  * @author Nisha
  */
-public class NewJPanel3 extends javax.swing.JPanel {
+public class Log_in extends javax.swing.JPanel {
 
     /**
      * Creates new form NewJPanel3
      */
-    public NewJPanel3() {
+    public Log_in() {
         initComponents();
     }
 

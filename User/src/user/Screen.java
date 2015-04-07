@@ -13,12 +13,12 @@ import javax.swing.Icon;
  *
  * @author Nisha
  */
-public class NewJPanel2 extends javax.swing.JPanel {
+public class Screen extends javax.swing.JPanel {
 
     /**
      * Creates new form NewJPanel2
      */
-    public NewJPanel2() {
+    public Screen() {
         initComponents();
         
     }
