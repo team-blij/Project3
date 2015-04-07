@@ -20,7 +20,7 @@ public class User {
     public static void main(String[] args) {
        NewJPanel2 newJPanel2 = new NewJPanel2();
        JFrame jFrame = new JFrame();
-       jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+       jFrame.setSize(625,600);
        jFrame.add(newJPanel2, BorderLayout.CENTER); 
        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        jFrame.setVisible(true);
