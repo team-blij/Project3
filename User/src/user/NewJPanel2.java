@@ -5,7 +5,9 @@
  */
 package user;
 
+import java.awt.Image;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.Icon;
 
 /**
  *
@@ -18,7 +20,14 @@ public class NewJPanel2 extends javax.swing.JPanel {
      */
     public NewJPanel2() {
         initComponents();
+        
     }
+    
+    public static void setChartLabel(Icon image)
+    {
+        chartLabel.setIcon(image);
+    }
+    
     
     private void setCheckBox(String[] items){
         DefaultComboBoxModel model = (DefaultComboBoxModel) choiceBox2.getModel();
@@ -67,6 +76,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
         choiceMenu = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         choiceBox2 = new javax.swing.JComboBox();
+        chartLabel = new javax.swing.JLabel();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -107,8 +117,6 @@ public class NewJPanel2 extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Barchart.png"))); // NOI18N
-
         choiceBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choiceBox2ActionPerformed(evt);
@@ -131,7 +139,8 @@ public class NewJPanel2 extends javax.swing.JPanel {
                         .addGap(22, 22, 22)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
+                                .addComponent(chartLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
                                 .addComponent(jLabel1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,12 +157,16 @@ public class NewJPanel2 extends javax.swing.JPanel {
                                         .addComponent(jButton3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addGap(144, 144, 144))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(chartLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -180,9 +193,8 @@ public class NewJPanel2 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,50 +232,50 @@ public class NewJPanel2 extends javax.swing.JPanel {
             case "Tweets":
                     switch (choiceBox2.getSelectedIndex()){
                         case 0: 
-                            createChart = new CreateChart(query.getBestAsset()); 
+                            createChart = new CreateChart(); 
                             break;
                         case 1:
-                            createChart = new CreateChart(query.getWorstAsset());
+                            createChart = new CreateChart();
                             break;
                         case 2:
-                            createChart = new CreateChart(query.getCountry());
+                            createChart = new CreateChart();
                         case 3: 
-                            createChart = new CreateChart(query.getRegion());
+                            createChart = new CreateChart();
                     }
                 break;
             case "Zoo":
                     switch (choiceBox2.getSelectedIndex()){
                         case 0: 
-                            createChart = new CreateChart(query.getBestAnimal()); 
+                            createChart = new CreateChart(); 
                             break;
                     }
                 break;
             case "Animal":
                     switch (choiceBox2.getSelectedIndex()){
                         case 0: 
-                            createChart = new CreateChart(query.getBlijdorpTweetsAndDate()); 
+                            createChart = new CreateChart(); 
                             break;
                         case 1:
-                            createChart = new CreateChart(query.getBlijdorpTweets());
+                            createChart = new CreateChart();
                             break;
                         case 2:
-                            createChart = new CreateChart(query.getFollowersBlijdorp());
+                            createChart = new CreateChart();
                             break;
                     }
                 break;
             case "Weather":
                         switch (choiceBox2.getSelectedIndex()){
                             case 0: 
-                                createChart = new CreateChart(query.getRainAndTweets()); 
+                                createChart = new CreateChart(); 
                                 break;
                             case 1:
-                                createChart = new CreateChart(query.getGoodWeatherAndTweets());
+                                createChart = new CreateChart();
                                 break;
                             case 2:
-                                createChart = new CreateChart(query.getLowTemperatureAndTweets());
+                                createChart = new CreateChart();
                                 break;
                             case 3:
-                                createChart = new CreateChart(query.getHighTemperatureAndTweets());
+                                createChart = new CreateChart();
                                 break;    
                         }
                 break;
@@ -276,6 +288,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel chartLabel;
     private javax.swing.JComboBox choiceBox2;
     private javax.swing.JComboBox choiceMenu;
     private javax.swing.JButton jButton1;

@@ -24,6 +24,7 @@ public class User {
        jFrame.add(newJPanel2, BorderLayout.CENTER); 
        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        jFrame.setVisible(true);
+       CreateChart cc = new CreateChart();
     }
     
 }
