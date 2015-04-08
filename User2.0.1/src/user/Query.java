@@ -71,10 +71,7 @@ public class Query {
         }catch(SQLException ex){}
       return dataset;
     }//end of getPieDataSet()
-    
 
-    
-    
     private CategoryDataset getCategoryDataset(ResultSet resultSet, String value, String second_value ){
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         
@@ -88,7 +85,19 @@ public class Query {
         return dataset;
     }//end of getCategoryDataset
     
-    
+        private XYSeriesCollection getXYSeries(ResultSet resultSet, String value, String second_Value){
+        XYSeries series = new XYSeries("Tweets");
+        try{
+        while( resultSet.next() ) 
+          {
+           series.add(Double.parseDouble( resultSet.getString(second_Value)),
+           Double.parseDouble( resultSet.getString(value)));
+         }
+        }catch(SQLException ex){}
+        XYSeriesCollection data = new XYSeriesCollection(series);
+        return data;
+    }//end of getXYSeries
+        
     public DefaultPieDataset getBestAsset(){
             query =     "   select Area, count(Area) as AreaCount "
                     +   "   from tweet "
@@ -185,7 +194,7 @@ public class Query {
                         return dataset;      
     }
     
-    public CategoryDataset getTemperatureAndTweets(){
+    public XYSeriesCollection  getTemperatureAndTweets(){
         query =     " Select Averagetemperature, Tweet.date, "
                 +   " (Select count(*) "
                 +   " From tweet"
@@ -197,8 +206,8 @@ public class Query {
                 +   " Group by Tweet.date" 
                 ;
         
-        return getCategoryDataset(executeQuery(query), "Tweets", "Averagetemperature");  
-
+        //return getCategoryDataset(executeQuery(query), "Tweets", "Averagetemperature");  
+        return  getXYSeries(executeQuery(query), "Averagetemperature", "Tweets");
     }
     
     public CategoryDataset getBlijdorpTweetsAndDate(){

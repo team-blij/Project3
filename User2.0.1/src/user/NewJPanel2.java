@@ -6,6 +6,7 @@
 package user;
 
 import java.awt.Image;
+import java.awt.event.WindowEvent;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -32,10 +33,10 @@ public class NewJPanel2 extends javax.swing.JPanel {
     
     public static void setChartLabel(ImageIcon ii)
     {
-     
      chartLabel.setIcon(ii);
-     
     }
+    
+
     
     
     
@@ -83,6 +84,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         choiceBox2 = new javax.swing.JComboBox();
         chartLabel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -135,19 +137,18 @@ public class NewJPanel2 extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(chartLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(choiceMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(choiceBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)
-                        .addGap(33, 33, 33)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(choiceMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(choiceBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(33, 33, 33)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(chartLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,8 +164,15 @@ public class NewJPanel2 extends javax.swing.JPanel {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(choiceBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
+
+        jButton1.setText("Log out");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -172,14 +180,17 @@ public class NewJPanel2 extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1))
         );
     }// </editor-fold>//GEN-END:initComponents
     
@@ -205,9 +216,13 @@ public class NewJPanel2 extends javax.swing.JPanel {
         showChart();
     
     }
+    
+        
+        
+        
+    
     private void choiceMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choiceMenuActionPerformed
-        setCheckbox();
-       
+        setCheckbox(); 
     }//GEN-LAST:event_choiceMenuActionPerformed
     private void showChart(){
             switch (selection){
@@ -243,7 +258,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
                     switch (choiceBox2.getSelectedIndex()){
                         case 0: 
                             //Bar chart
-                            createChart = new CreateChart(query.getBlijdorpTweetsAndDate(), "Response", "Datum", "Tweets"); 
+                            createChart = new CreateChart(query.getBlijdorpTweetsAndDate(), "Response", "Date", "Tweets"); 
                             break;
                         case 1:
                             //Pie chart
@@ -251,7 +266,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
                             break;
                         case 2:
                             //Bar chart
-                            createChart = new CreateChart(query.getFollowersBlijdorp(), "Followers", "Datum", "Followers");
+                            createChart = new CreateChart(query.getFollowersBlijdorp(), "Followers", "Date", "Followers");
                             break;
                     }
                 break;
@@ -259,11 +274,11 @@ public class NewJPanel2 extends javax.swing.JPanel {
                         switch (choiceBox2.getSelectedIndex()){
                             case 0: 
                                 //Bar chart
-                                createChart = new CreateChart(query.getWeatherAndTweets(), "Tweets and Weather", "Tweets", "Hoeveelheid" ); 
+                                createChart = new CreateChart(query.getWeatherAndTweets(), "Tweets and Weather", "Tweets", "Amount" ); 
                                 break;
                             case 1:
                                 //Bar Chart
-                                createChart = new CreateChart(query.getTemperatureAndTweets(), "Temperature", "Temperatuur", "Tweets");
+                                createChart = new CreateChart(query.getTemperatureAndTweets(), "Temperature", "Tweets", "Temperatuur");
                                 break;
                         }
                 break;
@@ -282,6 +297,11 @@ public class NewJPanel2 extends javax.swing.JPanel {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
          showChart();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       database.closeDatabase();
+       System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
     private void changeDateSeach(){
         switch(jComboBox1.getSelectedIndex()){
             case 0: query.setDay();
@@ -297,6 +317,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
     public static javax.swing.JLabel chartLabel;
     private javax.swing.JComboBox choiceBox2;
     private javax.swing.JComboBox choiceMenu;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
