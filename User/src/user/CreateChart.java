@@ -45,7 +45,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 //... // add new value
 //TimeSeriesCollection dataset = new TimeSeriesCollection(timeData);
 //JFreeChart chart = ChartFactory.createTimeSeriesChart(chartTitle, xAxisLabel, yAxisLabel, dataset);
-public class CreateChart {
+public final class CreateChart {
 
 //    public void mainChart()
 //    {
@@ -65,7 +65,7 @@ public class CreateChart {
 
     }
 
-    private JFreeChart createChart(final CategoryDataset dataset) {
+    public JFreeChart createChart() {
 
         final JFreeChart chart3 = ChartFactory.createPieChart("title",createPieDataset(), true, true, true);
 
@@ -89,7 +89,7 @@ public class CreateChart {
                 "Poplulaire dieren", // chart title
                 "Category", // domain axis label
                 "Value", // range axis label
-                dataset, // data
+                createAreaDataset(), // data
                 PlotOrientation.VERTICAL, // orientation
                 true, // include legend
                 true, // tooltips?
@@ -156,20 +156,11 @@ public class CreateChart {
         );
         // OPTIONAL CUSTOMISATION COMPLETED.
 
-        return chart3;
+        return chart2;
 
     }
 
-    public CreateChart() {
-
-        final CategoryDataset dataset = createAreaDataset();
-        final JFreeChart chart = createChart(dataset);
-        ImageIcon ii = new ImageIcon(chart.createBufferedImage(592, 500));
-
-        NewJPanel2.setChartLabel(ii);
-        System.out.println("TEST");
-
-    }
+    
 
     private CategoryDataset createAreaDataset() {
 

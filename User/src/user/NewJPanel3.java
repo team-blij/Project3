@@ -5,6 +5,18 @@
  */
 package user;
 
+import com.mysql.jdbc.Connection;
+import java.awt.BorderLayout;
+import java.awt.Image;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import static javax.swing.JOptionPane.showMessageDialog;
+import org.jfree.chart.JFreeChart;
+
+
 /**
  *
  * @author Nisha
@@ -36,8 +48,18 @@ public class NewJPanel3 extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
 
         jButton1.setText("OK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jFormattedTextField1.setText("Username");
+        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField1ActionPerformed(evt);
+            }
+        });
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -101,6 +123,62 @@ public class NewJPanel3 extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+NewJPanel3 dit = this;
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        NewJPanel2.setConnection(connectToDatabase());
+        if(con != null)
+        {
+        
+        NewJPanel2 np = new NewJPanel2();
+        
+        
+       JFrame jFrame = new JFrame();
+       jFrame.setSize(625,600);
+       jFrame.add(np, BorderLayout.CENTER); 
+       jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       jFrame.setVisible(true);
+       CreateChart cc = new CreateChart();
+       JFreeChart chart = cc.createChart();
+       
+       Image img = chart.createBufferedImage(592,500);
+            
+       Icon icon = new ImageIcon(img);
+       NewJPanel2.setChartLabel(icon);
+       dit.hide();
+       }
+    }//GEN-LAST:event_jButton1ActionPerformed
+    Connection con = null;
+    String username = null;
+    String password = null;
+
+    private Connection connectToDatabase() {
+
+        try {
+            username = jFormattedTextField1.getText();
+            password = jPasswordField1.getText();
+            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+
+            con = (Connection) DriverManager.getConnection(
+                    //The adres of the server
+                    "jdbc:mysql://145.24.222.198:8001/team_blij",
+                    //username
+                    username,
+                    //password
+                    password
+            );
+
+        } catch (SQLException | ClassNotFoundException ex) {
+            showMessageDialog(null, "Wrong info!");
+        }
+
+        return con;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,6 +5,7 @@
  */
 package user;
 
+import com.mysql.jdbc.Connection;
 import java.awt.Image;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.Icon;
@@ -309,4 +310,14 @@ public class NewJPanel2 extends javax.swing.JPanel {
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    static Connection conn = null;
+    
+    public static Connection getConnection() {
+        return conn;
+    }
+    
+    public static void setConnection(Connection con) {
+        con = conn;
+    }
 }

@@ -24,32 +24,19 @@ public class Database {
     private ResultSet resultSet = null;
 
     public Database(){
-        connectToDatabase();
+        getConnection();
     }//end of constructor
+    
+    public final void getConnection()
+    {
+        connection =  NewJPanel2.getConnection();
+        
+    }
 
-    private void connectToDatabase(){
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Class.forName("net.sourceforge.jtds.jdbc.Driver");
-
-           connection = DriverManager.getConnection(
-                    //The adres of the server
-                    "jdbc:mysql://145.24.222.198:8001/team_blij",
-                    //username
-                    "root",
-                    //password
-                    "blijdorp"
-                    );
-        }catch(SQLException ex){
-            
-        }catch(ClassNotFoundException ex){
-                    
-                            
-        }
+    
 
 
-    }//end of connectToDatabase()
+    
 
 
 

@@ -14,17 +14,19 @@ import javax.swing.JFrame;
  */
 public class User {
 
+    public static NewJPanel3 newJPanel2;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       NewJPanel2 newJPanel2 = new NewJPanel2();
+       newJPanel2 = new NewJPanel3();
        JFrame jFrame = new JFrame();
        jFrame.setSize(625,600);
        jFrame.add(newJPanel2, BorderLayout.CENTER); 
        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        jFrame.setVisible(true);
        CreateChart cc = new CreateChart();
+      
     }
     
 }
