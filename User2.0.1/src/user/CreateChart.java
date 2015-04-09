@@ -30,15 +30,15 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class CreateChart{
     
         public CreateChart(DefaultPieDataset dataSet, String name) {
-        NewJPanel2.setChartLabel(PieChart(dataSet, name));
+        Screen.setChartLabel(PieChart(dataSet, name));
         }//end of creatChart()
      
         public CreateChart(XYSeriesCollection dataSet, String name, String X, String Y) {
-        NewJPanel2.setChartLabel(XYChart(dataSet, name, X, Y));
+        Screen.setChartLabel(XYChart(dataSet, name, X, Y));
         }//end of creatChart()
         
         public CreateChart(CategoryDataset dataSet, String name, String X, String Y) {
-        NewJPanel2.setChartLabel(barChart(dataSet, name, X, Y));
+        Screen.setChartLabel(barChart(dataSet, name, X, Y));
         }//end of creatChart()
      
        

@@ -76,6 +76,8 @@ public class Database {
             return resultSet;
         }catch(SQLException ex){
             return null;
+        }catch(NullPointerException ex){
+        
         }
         }
         return resultSet;
