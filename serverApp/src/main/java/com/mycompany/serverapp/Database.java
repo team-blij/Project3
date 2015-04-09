@@ -27,8 +27,6 @@ public class Database {
     private String connectToDatabase(){
 
         try {
-            
-            
 
            connection = (Connection) DriverManager.getConnection(
                     //The adres of the server
@@ -39,8 +37,7 @@ public class Database {
                     //password
                     "blijdorp"
                     );
-
-           //System.out.println("Connected to database!");
+           
             return "U heeft verbinding";
             
         }catch(SQLException ex){
@@ -69,9 +66,7 @@ public class Database {
     }//end of getTable()
 
     public String insertTweetIntoTable(Long id_Tweet, Date tweet_date, String text, String region, String country, String Area, String user_Name, int followers, Long id_User, String Animal) throws SQLException{
-        //System.out.println("Before the connection");
         statement = connection.createStatement();
-        //System.out.println("After the connection");
         String sql = "INSERT INTO tweet"
                 + "(Tweet_id, date, text, region, country, Area, User_Name, followers, id_User, Animal) "
                 + "VALUES (\""
@@ -184,7 +179,6 @@ public class Database {
     
     ArrayList<String> arrayListString3 = new ArrayList();
     public ArrayList getAreaByAnimal(String animal){
-        
         ResultSet resultset = null;
         try{
         statement = connection.createStatement();

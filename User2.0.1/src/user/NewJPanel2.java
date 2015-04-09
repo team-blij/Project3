@@ -24,10 +24,13 @@ public class NewJPanel2 extends javax.swing.JPanel {
      */
     public NewJPanel2(Database database) {
         this.database = database;
+        
         query = new Query(database);
+        
         initComponents();
         setCheckbox();
         showChart();
+        
 
     }
     
@@ -105,6 +108,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
         jMenuBar3.add(jMenu6);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Day", "Week", "Month" }));
+        jComboBox1.setSelectedIndex(2);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -311,6 +315,7 @@ public class NewJPanel2 extends javax.swing.JPanel {
             case 2: query.setMonth();
                 break;
         }
+        showChart();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

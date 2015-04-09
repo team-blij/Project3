@@ -22,10 +22,6 @@ public class GetTwitter {
     private final Query query2= new Query("blijdorp");
     private final Query query3 = new Query("#blijdorp");
     private final Query query4 = new Query("from:rotterdamzoo");
-    
-    
-   
-   
 
     //Variables that are needed for gathering data:
     public User Blijdorp = null;
@@ -94,7 +90,7 @@ public class GetTwitter {
                 user_Name = status.getUser().getName();
                 message = status.getText();
 
-                //System.out.println(status.getGeoLocation() + "= geo data" );
+               
                 if (status.getGeoLocation() != null) {
                     double latitude = status.getGeoLocation().getLatitude();
                     double longitude = status.getGeoLocation().getLongitude();
@@ -109,7 +105,6 @@ public class GetTwitter {
                 tweet_ID = status.getId();
                 followers = status.getUser().getFollowersCount();
                 String Animal = getAnimal(message);
-                //System.out.println("Animal: " + Animal);
                 String Area = getArea(message);
                         if(!Animal.equals("no animal") && Area.equals("no area")){
                         Area = getAreaByAnimal(Animal);
@@ -120,7 +115,6 @@ public class GetTwitter {
 
                     ServerGUI.tweetUpdateCount++;
                 } catch (Exception e) {
-                    //System.out.println(e);
                 }
             }
             return result;

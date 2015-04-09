@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import javax.swing.ImageIcon;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -83,7 +84,10 @@ private ImageIcon PieChart(DefaultPieDataset dataset, String name){
             true,                        // tooltips?
             false                         // URLs?
         );
-      
+                 final CategoryPlot plot = chart.getCategoryPlot();
+                 final org.jfree.chart.axis.NumberAxis rangeAxis = (org.jfree.chart.axis.NumberAxis) plot.getRangeAxis();
+                 rangeAxis.setStandardTickUnits(org.jfree.chart.axis.NumberAxis.createIntegerTickUnits());
+                 
          ImageIcon ii = new ImageIcon(chart.createBufferedImage(592, 500)); 
       return ii;
 }//end of barChart()

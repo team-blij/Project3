@@ -21,9 +21,9 @@ public class User {
         
        NewJPanel3 newJPanel3 = new NewJPanel3();
        JFrame jFrame = new JFrame();
-       jFrame.setSize(400,700);
+       jFrame.setSize(400,400);
        jFrame.add(newJPanel3, BorderLayout.CENTER); 
-       //jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        jFrame.setVisible(true);
 
     }
